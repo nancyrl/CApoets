@@ -11,6 +11,8 @@ group :production do
   gem 'pg'
   gem 'rails_12factor' #Heroku-specific production settings
 end
+
+gem 'haml-rails', '>= 0.3.4', :group => :development
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
