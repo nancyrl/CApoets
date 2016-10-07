@@ -5,6 +5,11 @@ ruby '2.3.0' #Ruby version we're running
 group :development, :test do
   #make sure sqlite3 gem ONLY occurs inside development & test groups
   gem 'sqlite3'
+  gem 'database_cleaner', '1.4.1'
+  gem 'capybara', '2.4.4'
+  gem 'launchy'
+  gem 'rspec-rails', '3.4.2'
+  gem 'ZenTest', '4.11.0'
 end
 group :production do
   #make sure the following gems are in your production group:
@@ -49,6 +54,11 @@ group :development, :test do
   gem 'byebug'
 end
 
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -57,3 +67,6 @@ group :development do
   gem 'spring'
 end
 
+  #gem 'therubyracer', '~> 0.12.0'
+
+gem 'haml'
