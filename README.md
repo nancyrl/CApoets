@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 **California Poets in Schools**
+=======
+[![Code Climate](https://codeclimate.com/github/linanc/CApoets/badges/gpa.svg)](https://codeclimate.com/github/linanc/CApoets)
+
+# CApoets
+>>>>>>> a8635dc567ec59a8e43ee2e514486bd547519e1a
 169 Fall 2016
 
 *CodeClimate Badge:*
