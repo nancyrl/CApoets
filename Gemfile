@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-ruby '2.3.0' #Ruby version we're running
+# ruby '2.3.0' #Ruby version we're running
 group :development, :test do
   #make sure sqlite3 gem ONLY occurs inside development & test groups
   gem 'sqlite3'
