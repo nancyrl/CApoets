@@ -11,6 +11,11 @@ group :development, :test do
   gem 'rspec-rails', '3.4.2'
   gem 'ZenTest', '4.11.0'
 end
+
+group :test do
+  gem 'codeclimate-test-reporter', require: nil
+end
+
 group :production do
   #make sure the following gems are in your production group:
   gem 'pg'
@@ -19,7 +24,8 @@ end
 
 gem 'haml-rails', '>= 0.3.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+# gem 'rails', '4.2.5'
+gem 'rails', '4.2.7.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # Use SCSS for stylesheets
