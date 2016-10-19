@@ -1,1 +1,24 @@
-%h1 Hello world!
+%h1 Yolo 420 Swagerino
+
+= form_tag poems_path do
+
+  = label :person, :title, 'Teacher Information', :class => "header", :id => "teacher"
+  
+  = label :person, :title, 'Name', :class => "header"
+  = text_field :name, 'title', :class => "entry_box"
+  
+  = label :person, :title, 'Email', :class => "header"
+  = text_field :email, 'title', :class => "entry_box"
+
+  = label :person, :title, 'Yung Prodigy Information', :class => "header", :id => "student"
+  
+  = label :person, :title, 'Student Name', :class => "header"
+  = text_field :email, 'title', :class => "entry_box"
+  
+  = label :person, :title, 'Title', :class => "header"
+  = text_field :email, 'title', :class => "entry_box"
+
+  = label :poem, :title, 'Poem', :class => "entry_box_header"
+  = text_field :poem, 'title', :class => "entry_box", :id => "poem_entry"
+
+  = submit_tag 'Submit the poem', :id => "submit_button"
