@@ -19,7 +19,7 @@
   = text_field :title, 'title', :class => "entry_box"
 
   = label :poem, :title, 'Poem', :class => "header"
-  = text_field :poem, 'title', :class => "entry_box", :id => "poem_entry"
+  = text_area :poem, 'title', :class => "entry_box", :rows => 50, :cols => 50, :id => "poem_entry"
 
   = submit_tag 'Submit the poem', :id => "button"
   
