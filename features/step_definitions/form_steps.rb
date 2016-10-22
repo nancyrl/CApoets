@@ -41,6 +41,6 @@ Then(/^it should flash "([^"]*)"$/) do |flashed_message|
   end
 end
 
-Given(/^I fill in input box "([^"]*)" with "([^"]*)"$/) do |box, input|
+Given(/^I can fill in input box "([^"]*)" with "([^"]*)"$/) do |box, input|
   fill_in(box, :with => input)
 end

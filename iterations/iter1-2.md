@@ -1,3 +1,8 @@
+Our user story changed from iter 1-1 as we checked in with the customer,
+and got feedback on the type of submission form that they wanted to see. 
+We decided not to implement tokens or authenticataion for this iteration, 
+since authentication involved a lot more work and decision-making than we had anticipated. 
+
 Feature: submission form for poet-teachers
 
   As a poet teacher

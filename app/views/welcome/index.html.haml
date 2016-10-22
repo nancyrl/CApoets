@@ -5,21 +5,21 @@
   = label :person, :title, 'Teacher Information', :class => "header", :id => "teacher"
   
   = label :person, :title, 'Name', :class => "header"
-  = text_field :teacher_name, 'title', :class => "entry_box"
+  = text_field :teacher_name, 'title', :class => "entry_box", :id => 'Name'
   
   = label :person, :title, 'Email', :class => "header"
-  = text_field :email, 'title', :class => "entry_box"
+  = text_field :email, 'title', :class => "entry_box", :id => 'Email'
 
   = label :person, :title, 'Student Information', :class => "header", :id => "student"
   
   = label :person, :title, 'Student Name', :class => "header"
-  = text_field :student_name, 'title', :class => "entry_box"
+  = text_field :student_name, 'title', :class => "entry_box", :id => 'Student Name'
   
   = label :person, :title, 'Title', :class => "header"
-  = text_field :title, 'title', :class => "entry_box"
+  = text_field :title, 'title', :class => "entry_box", :id => 'Title'
 
   = label :poem, :title, 'Poem', :class => "header"
-  = text_area :poem, 'title', :class => "entry_box", :rows => 50, :cols => 50, :id => "poem_entry"
+  = text_area :poem, 'title', :class => "entry_box", :rows => 50, :cols => 50, :id => "Poem Entry"
   
   = submit_tag 'Submit the poem', :id => "button"
   
