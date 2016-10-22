@@ -24,8 +24,8 @@ end
 
 gem 'haml-rails', '>= 0.3.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-# gem 'rails', '4.2.5'
-gem 'rails', '4.2.7.1'
+gem 'rails', '4.2.5'
+# gem 'rails', '4.2.7.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # Use SCSS for stylesheets
