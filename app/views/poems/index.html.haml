@@ -1,0 +1,20 @@
+%h1 All Poems
+
+%table#poems
+  %thead
+    %tr
+      %th Poet-Teacher Name
+      %th Email
+      %th Student Name
+      %th Title of Poem
+      %th Release Form
+  %tbody
+    - @poems.each do |poem|
+      %tr
+        %td= poem.teacher_name 
+        %td= poem.email
+        %td= poem.student_name
+        %td= poem.title
+        %td= link_to "Download", poem.attachment_url
+
+= link_to 'Add new poem', new_poem_path

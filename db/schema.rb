@@ -13,4 +13,13 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  create_table "poems", force: :cascade do |t|
+    t.string "teacher_name"
+    t.string "email"
+    t.string "student_name"
+    t.string "title"
+    t.string "attachment"
+    t.text   "poem"
+  end
+
 end

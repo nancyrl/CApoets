@@ -46,6 +46,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem "mini_magick"
+gem 'simple_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

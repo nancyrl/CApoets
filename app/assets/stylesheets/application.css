@@ -53,28 +53,12 @@ h1.title {
   padding: 4px;
 }
 
-form label.header_entry_box {
-  display: flex;
-  padding-left: 10px;
-  line-height: 25px;
-  font-weight: bold;
-  color: pink;
-}
-
-form label.entry_box_header {
-  display: flex;
-  padding-left: 10px;
-  line-height: 25px;
-  font-weight: bold;
-  color: pink;
-}
-
 form label.header {
   display: flex;
   padding-left: 10px;
   line-height: 25px;
   font-weight: bold;
-  color: blue;
+  color: #3e6db2;
 }
 
 form label.header#teacher{
@@ -87,6 +71,23 @@ form label.header#student{
   padding: 15px 0 0 10px;
 }
 
-#submit_button {
+table#poems {
   margin: 10px;
+  border-collapse: collapse;
+  width: 80%;
+  border-bottom: 2px solid black;
+}
+table#poems th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: wheat;
+}
+table#poems th, table#poems td {
+  padding: 2px;
+  text-align: left;
+}
+
+#button{
+  margin: 10px;
+  
 }
