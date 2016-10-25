@@ -3,12 +3,25 @@
 <head>
   <title>TestProject</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    // if Google is down, it looks to local file...
+    if (typeof jQuery == 'undefined') {
+      document.write(unescape("%3Cscript src='js/jquery-1.11.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+    </script>
+    <script type="text/javascript" src="js/clone-form-td-multiple.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
 <%= yield %>
 
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
+ 
 </html>

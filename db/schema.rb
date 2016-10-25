@@ -11,6 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161025173608) do
+
+  create_table "poems", force: :cascade do |t|
+    t.string   "student_name"
+    t.string   "student_grade"
+    t.string   "poem_title"
+    t.text     "poemt"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
 end
