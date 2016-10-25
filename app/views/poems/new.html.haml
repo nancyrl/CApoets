@@ -1,0 +1,75 @@
+.container
+ .info
+  %h1 Submit a Poem
+  %span
+ %form.modal
+  %header.header
+   %h1 California Poets in the Schools
+   .card-type
+    %a.card.active
+     %img{:src => 'http://aldf.org/wp-content/uploads/2016/06/harambe.jpg', :height => '40px', :width => '60px'}
+    %a.card
+     %img{:src => 'https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg', :height => '40px', :width => '50px'}
+    %a.card
+     %img{:src => 'http://media.breitbart.com/media/2016/10/sad-pepe-640x480.jpg', :height => '40px', :width => '50px'}
+    %a.card
+     %img{:src => 'http://images.newseveryday.com/data/images/full/37495/jungkook.jpg', :height => '40px', :width => '60px'}
+  .content
+   .form
+    .form-row
+     .input-group
+      %label{:for => ''} Poet-Teacher Name
+      %input{:type => 'text', :placeholder => 'ex: Jennifer Yip'}
+    .form-row
+     .input-group
+      %label{:for => ''} Email
+      %input{:type => 'email', :maxlength => '', :placeholder => 'ex:jenniferyip@berkeley.edu'}
+    
+    
+    #entry1.student_instance
+     .form-row
+      .input-group
+       %label.label_student_name.control-label{:for => 'student'} Student Name
+       %input#student.input_student.form-control{:name => 'student', :type => 'text', :placeholder => 'ex: Ivette Flores'}
+      .input-group
+       %label{:for => ''} Student Grade
+       %select{:name => "grade"}
+        %option{:value => "K"} K
+        %option{:value => "first"} 1
+        %option{:value => "second"} 2
+        %option{:value => "third"} 3
+        %option{:value => "fourth"} 4
+        %option{:value => "fifth"} 5
+        %option{:value => "sixth"} 6
+        %option{:value => "sevent"} 7
+        %option{:value => "eighth"} 8
+        %option{:value => "ninth"} 9
+        %option{:value => "tenth"} 10
+        %option{:value => "eleventh"} 11
+        %option{:value => "twelfth"} 12  
+     .form-row
+      .input-group
+       %label.label_poem_title{:for => 'title'} Poem Title
+       %input#title.input_poem_title{:name => 'title', :type => 'text', :placeholder => 'ex: Happiness'}
+     .form-row 
+      .input-group
+       %label.col-md-4.label_poem.control-label{:for => 'textarea'} Poem
+       %textarea#textarea.input_poem.form-control{:name => "textarea"} sample poem
+     .form-row
+      .input-group
+       %label.col-md-4.control-label{:for => "imgInp"} Attach File
+       %input#imgInp{:type => "file", :multiple => "multiple"}
+     .form-row
+      .input-group
+       %img#preview{:alt => "preview", :src => "http://golloscdn.com/common/no-image.jpg"} 
+     %br
+     %hr
+     %br
+  %button#addStudent{:type => 'button'} Add another student
+  %br
+  %br
+  %footer.footer
+   %button.button{:type => 'submit'} Submit
+   %hr
+   %button.button{:type => 'reset'} Reset
+  
