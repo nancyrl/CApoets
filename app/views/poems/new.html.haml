@@ -18,21 +18,21 @@
    .form
     .form-row
      .input-group
-      %label{:for => ''} Poet-Teacher Name
-      %input{:type => 'text', :placeholder => 'ex: Jennifer Yip'}
+      %label{:for => 'teacher_name'} Poet-Teacher Name
+      %input{:type => 'text', :name => 'teacher_name', :placeholder => 'ex: Jennifer Yip'}
     .form-row
      .input-group
-      %label{:for => ''} Email
-      %input{:type => 'email', :maxlength => '', :placeholder => 'ex:jenniferyip@berkeley.edu'}
+      %label{:for => 'email'} Email
+      %input{:type => 'email', :name => 'email', :placeholder => 'ex:jenniferyip@berkeley.edu'}
     
     
     #entry1.student_instance
      .form-row
       .input-group
-       %label.label_student_name.control-label{:for => 'student'} Student Name
-       %input#student.input_student.form-control{:name => 'student', :type => 'text', :placeholder => 'ex: Ivette Flores'}
+       %label.label_student_name.control-label{:for => 'student_name'} Student Name
+       %input#student.input_student.form-control{:name => 'student_name', :type => 'text', :placeholder => 'ex: Ivette Flores'}
       .input-group
-       %label{:for => ''} Student Grade
+       %label{:for => 'grade'} Student Grade
        %select{:name => "grade"}
         %option{:value => "K"} K
         %option{:value => "first"} 1
@@ -53,12 +53,12 @@
        %input#title.input_poem_title{:name => 'title', :type => 'text', :placeholder => 'ex: Happiness'}
      .form-row 
       .input-group
-       %label.col-md-4.label_poem.control-label{:for => 'textarea'} Poem
-       %textarea#textarea.input_poem.form-control{:name => "textarea"} sample poem
+       %label.col-md-4.label_poem.control-label{:for => 'poem'} Poem
+       %textarea#textarea.input_poem.form-control{:name => "poem"} sample poem
      .form-row
       .input-group
-       %label.col-md-4.control-label{:for => "imgInp"} Attach File
-       %input#imgInp{:type => "file", :multiple => "multiple"}
+       %label.col-md-4.control-label{:for => "attachment"} Attach File
+       %input#attachment{:type => "file", :name => 'attachment', :multiple => "multiple"}
      .form-row
       .input-group
        %img#preview{:alt => "preview", :src => "http://golloscdn.com/common/no-image.jpg"} 

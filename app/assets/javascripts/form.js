@@ -14,16 +14,16 @@ $(function() {
     // Label for Which Student
     newElem.find('.label_student_name').attr('id', 'ID' + newNum + '_reference').attr('name', 'ID' + newNum + '_reference').html('Student #' + newNum + ' Name');
     // StudentName input - text 
-    newElem.find('.label_student_name').attr('for', 'ID' + newNum + '_student');
-    newElem.find('.input_student').attr('id', 'ID' + newNum + '_student').attr('name', 'ID' + newNum + '_student').val('');
+    newElem.find('.label_student_name').attr('for', 'ID' + newNum + '_student_name');
+    newElem.find('.input_student').attr('id', 'ID' + newNum + '_student_name').attr('name', 'ID' + newNum + '_student_name').val('');
     // Poem Title input - text
     newElem.find('.label_poem_title').attr('id', 'ID' + newNum + '_reference').attr('name', 'ID' + newNum + '_reference');
     newElem.find('.label_poem_title').attr('for', 'ID' + newNum + '_title');
     newElem.find('.input_poem_title').attr('id', 'ID' + newNum + '_title').attr('name', 'ID' + newNum + '_title').val('');
     //Poem input - text
     newElem.find('.label_poem').attr('id', 'ID' + newNum + '_reference').attr('name', 'ID' + newNum + '_reference');
-    newElem.find('.label_poem').attr('for', 'ID' + newNum + '_poemarea');
-    newElem.find('.input_poem').attr('id', 'ID' + newNum + '_poemarea').attr('name', 'ID' + newNum + '_poemarea').val('sample poem');
+    newElem.find('.label_poem').attr('for', 'ID' + newNum + '_poem');
+    newElem.find('.input_poem').attr('id', 'ID' + newNum + '_poem').attr('name', 'ID' + newNum + '_poem').val('sample poem');
 
     // Insert the new element after the last "duplicatable" input field
     $('#entry' + num).after(newElem);
@@ -47,6 +47,6 @@ function readURL(input) {
     }
 }
 
-$("#imgInp").change(function(){
+$("#attachment").change(function(){
     readURL(this);
 });
