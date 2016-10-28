@@ -44,3 +44,12 @@ end
 Given(/^I can fill in input box "([^"]*)" with "([^"]*)"$/) do |box, input|
   fill_in(box, :with => input)
 end
+
+
+And (/^I fill in input box "[^"]*" with "([^"]*)"$/) do |box, input|
+  pending
+end 
+
+And (/^I attach my release form "([^"]*)"$/) do |form|
+  pending
+end

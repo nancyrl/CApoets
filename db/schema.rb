@@ -12,5 +12,12 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 0) do
-
+  create_table "poems", force: :cascade do |p|
+    p.string    "teacher_name",          limit: 255
+    p.string    "email",    limit: 255
+    p.string    "student_name",     limit: 255
+    p.string    "title",       limit: 255
+    p.text      "poem"
+    p.datetime  "submitted_at"
+  end
 end
