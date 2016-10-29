@@ -1,29 +1,57 @@
-%h1 California Poets Poem Submission
+.container
+  .info
+    %h1 Submit a poem
+    %span
+  = form_for Poem.new, html: {role: "form"} do |p|
+    %header.header
+      %h1 California Poets in the Schools
+      .card-type
+        %a.card.active{:href => '#'}
+          %img{:src => 'http://aldf.org/wp-content/uploads/2016/06/harambe.jpg', :height => '40px', :width => '60px'}
+        %a.card{:href => '#'}
+          %img{:src => 'https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg', :height => '40px', :width => '50px'}
+        %a.card{:href => '#'}
+          %img{:src => 'http://media.breitbart.com/media/2016/10/sad-pepe-640x480.jpg', :height => '40px', :width => '50px'}
+        %a.card{:href => '#'}
+          %img{:src => 'http://images.newseveryday.com/data/images/full/37495/jungkook.jpg', :height => '40px', :width => '60px'}
+    .content
+      .form
+        %h2 'Poet-Teacher Information', :class => "header", :id => "teacher"
+        .form-row
+          .input-group
+            = p.label :teacher_name, 'Name', :class => "header"
+            = p.text_field :teacher_name, {class: "form-control"}
+        .form-row
+          .input-group
+            = p.label :email, 'Email', :class => "header"
+            = p.text_field :email, {class: "form-control"}
+              
+        %h2 'Student Information', :class => "header", :id => "student"
+        
+        %entry1.student_instance
+        
+          .form-row
+            .input-group
+              = p.label :student_name, 'Student Name', :class => "header"
+              = p.text_field :student_name, :class => "entry_box"
+          .form-row
+            .input-group
+              = p.label :title, 'Poem Title', :class => "header"
+              = p.text_field :title, :class => "entry_box", :name => 'title', :type => 'text', :placeholder => 'ex: Happiness'
+          .form-row
+            .input-group
+              = p.label :poem, 'Poem', :class => "header"
+              = p.text_area :poem, :class => "entry_box", :id => "poem_entry"
+          .form-row
+            .input-group
+              = p.label :attachment, 'Release Form', :class => "header"
+              = p.file_field :attachment, :id => "button"
+          .form-row
+            .input-group
+              %img#preview{:alt => "preview", :src => "http://golloscdn.com/common/no-image.jpg"} 
+              
+              %br
 
-= form_tag poems_path, :multipart => true do
-
-  = label :person, :title, 'Poet-Teacher Information', :class => "header", :id => "teacher"
-  
-  = label :poem, :teacher_name, 'Name', :class => "header"
-  = text_field :poem, 'teacher_name', :class => "entry_box"
-  
-  = label :poem, :email, 'Email', :class => "header"
-  = text_field :poem, 'email', :class => "entry_box"
-
-  = label :person, :title, 'Student Information', :class => "header", :id => "student"
-  
-  = label :poem, :student_name, 'Student Name', :class => "header"
-  = text_field :poem, 'student_name', :class => "entry_box"
-  
-  = label :poem, :title, 'Title of Poem', :class => "header"
-  = text_field :poem, 'title', :class => "entry_box"
-
-  = label :poem, :poem, 'Poem', :class => "header"
-  = text_area :poem, 'poem', :class => "entry_box", :rows => 50, :cols => 50, :id => "poem_entry"
-  
-  = label :poem, :attachment, 'Release Form', :class => "header"
-  = file_field :poem, :attachment, :id => "button"
-  
-  = submit_tag 'Submit the poem', :id => "button"
-  
-  = submit_tag 'Submit another poem', :id => "button"
+    = submit_tag 'Submit the poem', :id => "button"
+    
+    = submit_tag 'Submit another poem', :id => "button"
