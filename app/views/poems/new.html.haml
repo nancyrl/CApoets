@@ -2,56 +2,51 @@
   .info
     %h1 Submit a poem
     %span
-  = form_for Poem.new, html: {role: "form"} do |p|
+  = form_tag poems_path, :class => "modal", :multipart => true do
     %header.header
       %h1 California Poets in the Schools
-      .card-type
-        %a.card.active{:href => '#'}
-          %img{:src => 'http://aldf.org/wp-content/uploads/2016/06/harambe.jpg', :height => '40px', :width => '60px'}
-        %a.card{:href => '#'}
-          %img{:src => 'https://pbs.twimg.com/profile_images/378800000822867536/3f5a00acf72df93528b6bb7cd0a4fd0c.jpeg', :height => '40px', :width => '50px'}
-        %a.card{:href => '#'}
-          %img{:src => 'http://media.breitbart.com/media/2016/10/sad-pepe-640x480.jpg', :height => '40px', :width => '50px'}
-        %a.card{:href => '#'}
-          %img{:src => 'http://images.newseveryday.com/data/images/full/37495/jungkook.jpg', :height => '40px', :width => '60px'}
     .content
       .form
-        %h2 'Poet-Teacher Information', :class => "header", :id => "teacher"
+        %h2 Poet-Teacher Information
         .form-row
           .input-group
-            = p.label :teacher_name, 'Name', :class => "header"
-            = p.text_field :teacher_name, {class: "form-control"}
+            = label :poem, :teacher_name, 'Name'
+            = text_field :poem, :teacher_name, :class=> "form-control", :placeholder => 'ex: Jennifer Yip'
         .form-row
           .input-group
-            = p.label :email, 'Email', :class => "header"
-            = p.text_field :email, {class: "form-control"}
+            = label :poem, :email, 'Email'
+            = text_field :poem, :email, :class=> "form-control", :placeholder => 'ex: jenniferyip@berkeley.edu'
               
-        %h2 'Student Information', :class => "header", :id => "student"
+        %h2 Student Information
         
         %entry1.student_instance
         
           .form-row
             .input-group
-              = p.label :student_name, 'Student Name', :class => "header"
-              = p.text_field :student_name, :class => "entry_box"
+              = label :poem, :student_name, 'Student Name', :class => "label_student_name control-label"
+              = text_field :poem, :student_name, :class => "entry_box input_student form-control", :placeholder => 'ex: Jennifer Yip'
+            -#.input-group
+            -#  = label :poem, :student_grade, "Grade"
+            -#  = select :poem, 'student_grade', [ 'K', '1', '2', '3', '4', '5' , '6', '7', '8', '9', '10', '11', '12', 'Other']
           .form-row
             .input-group
-              = p.label :title, 'Poem Title', :class => "header"
-              = p.text_field :title, :class => "entry_box", :name => 'title', :type => 'text', :placeholder => 'ex: Happiness'
+              = label :poem, :title, 'Poem Title'
+              = text_field :poem, 'title', :class => "entry_box", :type => 'text', :placeholder => 'ex: Happiness'
+              
           .form-row
             .input-group
-              = p.label :poem, 'Poem', :class => "header"
-              = p.text_area :poem, :class => "entry_box", :id => "poem_entry"
+              = label :poem, :poem, 'Poem'
+              = text_area :poem, 'poem', :class => "entry_box", :id => "poem_entry", :placeholder => 'ex: sample poem', :class=> "form-control"
           .form-row
             .input-group
-              = p.label :attachment, 'Release Form', :class => "header"
-              = p.file_field :attachment, :id => "button"
+              = label :poem, :attachment, 'Release Form'
+              = file_field :poem, :attachment, :id => "button"
           .form-row
             .input-group
               %img#preview{:alt => "preview", :src => "http://golloscdn.com/common/no-image.jpg"} 
-              
-              %br
-
-    = submit_tag 'Submit the poem', :id => "button"
-    
-    = submit_tag 'Submit another poem', :id => "button"
+          %br
+          %br
+      = button_tag 'Add another student', :id => "addStudent", :type=>"button"
+    %br
+    %footer.footer
+      = submit_tag 'Submit the poem', :id => "button", :class=>"button"
