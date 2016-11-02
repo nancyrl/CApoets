@@ -5,7 +5,6 @@ class CreatePoems < ActiveRecord::Migration
       t.string :county
       t.string :email
       t.string :student_name
-      t.string :school
       t.string :grade
       t.string :student_teacher_name
       t.string :title
