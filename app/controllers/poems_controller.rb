@@ -1,6 +1,6 @@
 class PoemsController < ApplicationController
     def poem_params
-        params.require(:poem).permit(:teacher_name, :county, :email, :student_name, :school, :grade, :student_teacher_name, :title, :attachment, :poem)
+        params.require(:poem).permit(:teacher_name, :county, :email, :student_name, :school, :grade, :student_teacher_name, :title, :attachment, :poem, :release)
     end
     
     def index

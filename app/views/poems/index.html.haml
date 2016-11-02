@@ -11,7 +11,8 @@
       %th Grade
       %th Teacher Name
       %th Title of Poem
-      %th Release Form
+      %th Poem/Images
+      %th Release
   %tbody
     - @poems.each do |poem|
       %tr
@@ -24,5 +25,6 @@
         %td= poem.student_teacher_name
         %td= poem.title
         %td= link_to "Download", poem.attachment_url
+        %td= link_to "Download", poem.release_url
 
 = link_to 'Add new poem', new_poem_path

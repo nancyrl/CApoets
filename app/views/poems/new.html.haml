@@ -52,12 +52,15 @@
               = text_area :poem, 'poem', :class => "entry_box", :id => "poem_entry", :placeholder => 'ex: sample poem', :class=> "form-control"
           .form-row
             .input-group
-              = label :poem, :attachment, 'Release Form'
+              = label :poem, :attachment, 'Attach Poem/Images'
               = file_field :poem, :attachment, :id => "button"
           .form-row
             .input-group
               %img#preview{:alt => "preview", :src => "http://golloscdn.com/common/no-image.jpg"} 
-          %br
+          .form-row
+            .input-group
+              = label :poem, :release, 'Release Form'
+              = file_field :poem, :release, :id => "button"
           %br
       -#= button_tag 'Add another student', :id => "addStudent", :type=>"button"
     %br
