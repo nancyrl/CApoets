@@ -54,9 +54,9 @@
             .input-group
               = label :poem, :attachment, 'Attach Poem/Images'
               = file_field :poem, :attachment, :id => "button"
-          .form-row
-            .input-group
-              %img#preview{:alt => "preview", :src => "http://golloscdn.com/common/no-image.jpg"} 
+          -#.form-row
+          -#  .input-group
+          -#    %img#preview{:alt => "preview", :src => "http://golloscdn.com/common/no-image.jpg"} 
           .form-row
             .input-group
               = label :poem, :release, 'Release Form'
