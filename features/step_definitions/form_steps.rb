@@ -10,47 +10,37 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
-
-
-When /^(?:|I ) am a user on the ([^"]*) who wants to ([^"]*)$/ do |page_name, action|
-  pending("To be completed")
+Given(/^I am a user on the "([^"]*)" page who wants to "([^"]*)"$/) do |page_name, action|
+  visit(page_name)
 end
 
-Then /^(?:|I )should see "([^"]*)"$/ do |text|
-  pending("To be completed")
+Then(/^I should see input boxes labeled with the following: "([^"]*)"$/) do |list_of_boxes|
+  box_list = list_of_boxes.split(", ")
+  box_list.each do |box|
+    if page.respond_to? :should
+      page.should have_content(box)
+    else
+      assert page.has_content?(box)
+    end
+  end
 end
 
-When /^(?:|I )click on the "([^"]*)" button I should get a "([^"]*)"$/ do |button, token|
-  pending("To be completed")
+Then(/^I should see a "([^"]*)" button$/) do |button_name|
+  find_button(button_name)
 end
 
-When /^(?:|I ) am returning a user on the ([^"]*) wantint to ([^"]*)$/ do |page_name, action|
-  pending("To be completed")
+When(/^I click on the "([^"]*)" button$/) do |button_name|
+  click_button(button_name)
 end
 
-Then /^(?:|I )should see "([^"]*)" entry box for "([^"]*)"$/ do |entry, action|
-  pending("To be completed")
+Then(/^it should flash "([^"]*)"$/) do |flashed_message|
+  if page.respond_to? :should
+    page.should have_content(flashed_message)
+  else
+    assert page.has_content?(flashed_message)
+  end
 end
 
-Then /^(?:|I )enter ([^"]*) into the "([^"]*)"$/ do |entry, box|
-  pending("To be completed")
+Given(/^I can fill in input box "([^"]*)" with "([^"]*)"$/) do |box, input|
+  fill_in(box, :with => input)
 end
-
-Then /^(?:|I )should see "([^"]*)" labled with "([^"]*)"$/ do |entry, action|
-  pending("To be completed")
-end
-
-Then /^(?:|I )should see an option to submit "([^"]*)"$/ do |submission|
-  pending("To be completed")
-end
-
-Then /^(?:|I )click "([^"]*)" should flash "([^"]*)"$/ do |submission, text|
-  pending("To be completed")
-end
-
-
-
-
-
-
-

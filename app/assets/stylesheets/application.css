@@ -133,6 +133,7 @@ img {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+<<<<<<< HEAD
 .modal .content {
   padding: 30px;
 }
@@ -154,6 +155,15 @@ img {
   width: 300px;
   margin: 50px auto;
   text-align: center;
+=======
+
+form label.header {
+  display: flex;
+  padding-left: 10px;
+  line-height: 25px;
+  font-weight: bold;
+  color: #3e6db2;
+>>>>>>> origin/master
 }
 .info h1 {
   margin: 0 0 15px;
@@ -183,7 +193,12 @@ lesshat-selector {
 @-o-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 @keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 
+<<<<<<< HEAD
 #addStudent {
   display: block;
   margin: auto;
+=======
+#button{
+  margin: 10px;
+>>>>>>> origin/master
 }
