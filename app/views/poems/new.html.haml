@@ -1,0 +1,68 @@
+.container
+  .info
+    %h1 Submit a poem
+    %span
+  = form_tag poems_path, :class => "modal", :multipart => true do
+    %header.header
+      %h1 California Poets in the Schools
+    .content
+      .form
+        %h2 Poet-Teacher Information
+        .form-row
+          .input-group
+            = label :poem, :teacher_name, 'Name'
+            = text_field :poem, :teacher_name, :class=> "form-control", :placeholder => 'ex: Jennifer Yip'
+        .form-row
+          .input-group
+            = label :poem, :email, 'Email'
+            = text_field :poem, :email, :class=> "form-control", :placeholder => 'ex: jenniferyip@berkeley.edu'
+              
+        %h2 Student Information
+        
+        %entry1.student_instance
+        
+          .form-row
+            .input-group
+              = label :poem, :student_name, 'Student Name', :class => "label_student_name control-label"
+              = text_field :poem, :student_name, :class => "entry_box input_student form-control", :placeholder => 'ex: Ivette Flores'
+            .input-group
+              = label :poem, :grade, "Grade"
+              = select :poem, 'grade', [ 'K', '1', '2', '3', '4', '5' , '6', '7', '8', '9', '10', '11', '12', 'Other']
+          .form-row
+            .input-group
+              = label :poem, :student_teacher_name, 'Teacher Name'
+              = text_field :poem, 'student_teacher_name', :class => "entry_box", :type => 'text', :placeholder => 'ex: Nancy Li'
+          
+          .form-row
+            .input-group
+              = label :poem, :school, 'School'
+              = text_field :poem, 'school', :class => "entry_box", :type => 'text', :placeholder => 'ex: Kevin Middle School'
+            .input-group
+              = label :poem, :county, "County"
+              = select :poem, 'county', [ 'Alameda', 'Alpine', 'Amador', 'Butte', 'Calaveras', 'Colusa' , 'Contra Costa', 'Del Norte', 'El Dorado', 'Fresno', 'Glenn', 'Humboldt', 'Imperial', 'Inyo', 'Kern', 'Kings', 'Lake', 'Lassen', 'Los Angeles', 'Madera', 'Marin', 'Mariposa', 'Mendocino', 'Merced', 'Modoc', 'Mono', 'Monterey', 'Napa', 'Nevada', 'Placer', 'Plumas', 'Riverside', 'Sacramento', 'San Benito', "San Bernardino", 'San Diego', 'San Francisco', 'San Joaquin', 'San Luis Obispo', 'San Mateo', 'Santa Barbara', 'Santa Clara', 'Santa Cruz', 'Shasta', 'Sierra', 'Siskiyou', 'Solano', 'Sonoma', 'Stanislaus', 'Sutter', 'Tehama', 'Trinity', 'Tulare', 'Tuolumne', 'Ventura', 'Yolo', 'Yuba']
+
+          .form-row
+            .input-group
+              = label :poem, :title, 'Poem Title'
+              = text_field :poem, 'title', :class => "entry_box", :type => 'text', :placeholder => 'ex: Happiness'
+              
+          .form-row
+            .input-group
+              = label :poem, :poem, 'Poem'
+              = text_area :poem, 'poem', :class => "entry_box", :id => "poem_entry", :placeholder => 'ex: sample poem', :class=> "form-control"
+          .form-row
+            .input-group
+              = label :poem, :attachment, 'Attach Poem/Images'
+              = file_field :poem, :attachment, :id => "button"
+          -#.form-row
+          -#  .input-group
+          -#    %img#preview{:alt => "preview", :src => "http://golloscdn.com/common/no-image.jpg"} 
+          .form-row
+            .input-group
+              = label :poem, :release, 'Release Form'
+              = file_field :poem, :release, :id => "button"
+          %br
+      -#= button_tag 'Add another student', :id => "addStudent", :type=>"button"
+    %br
+    %footer.footer
+      = submit_tag 'Submit the poem', :id => "button", :class=>"button"

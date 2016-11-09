@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
-  create_table "poems", force: :cascade do |p|
-    p.string    "teacher_name",          limit: 255
-    p.string    "email",    limit: 255
-    p.string    "student_name",     limit: 255
-    p.string    "title",       limit: 255
-    p.text      "poem"
-    p.datetime  "submitted_at"
+ActiveRecord::Schema.define(version: 20161102033515) do
+
+  create_table "item_wrappers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
+  create_table "poems", force: :cascade do |t|
+    t.string "teacher_name"
+    t.string "county"
+    t.string "email"
+    t.string "student_name"
+    t.string "grade"
+    t.string "student_teacher_name"
+    t.string "title"
+    t.string "attachment"
+    t.text   "poem"
+    t.string "release"
+  end
+
 end
