@@ -11,14 +11,15 @@
 [![Test Coverage](https://codeclimate.com/github/linanc/CApoets/badges/coverage.svg)](https://codeclimate.com/github/linanc/CApoets/coverage)
 
 *Heroku Link*
-http://fathomless-ravine-56655.herokuapp.com/
+http://capoets.herokuapp.com
 
 *Pivotal Tracker Link*
 https://www.pivotaltracker.com/n/projects/1886675
 
-This project will extend functionality for an existing website (CaliforniaPoets.org). 
-The customer wishes to have a submission form that is intuitive for users not that tech saavy to use.
 
+This project will extend functionality for an existing website (CaliforniaPoets.org),
+a non-profit organization for poet teachers and students. 
+
+The customer wishes to have an easy to use submission form so that their poet teachers can upload their students' poems, images, and release forms. 
 The customer would also like a dashboard where the administrators can filter through
-submitted literary content. Accepted content (poems, photos, current events, past events, news)
-will be published immediately to CaliforniaPoets.org. 
+submitted poems. Accepted poems are published for the public to view. 
