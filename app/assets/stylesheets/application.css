@@ -133,10 +133,19 @@ img {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-<<<<<<< HEAD
+
+form label.header {
+  display: flex;
+  padding-left: 10px;
+  line-height: 25px;
+  font-weight: bold;
+  color: #3e6db2;
+}
+
 .modal .content {
   padding: 30px;
 }
+
 .modal .footer .button {
   outline: none;
   display: block;
@@ -151,19 +160,11 @@ img {
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .info {
   width: 300px;
   margin: 50px auto;
   text-align: center;
-=======
-
-form label.header {
-  display: flex;
-  padding-left: 10px;
-  line-height: 25px;
-  font-weight: bold;
-  color: #3e6db2;
->>>>>>> origin/master
 }
 .info h1 {
   margin: 0 0 15px;
@@ -185,6 +186,7 @@ form label.header {
 .info span .fa {
   color: #00a6ea;
 }
+
 lesshat-selector {
   -lh-property: 0; } 
   
@@ -193,12 +195,6 @@ lesshat-selector {
 @-o-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 @keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 
-<<<<<<< HEAD
-#addStudent {
-  display: block;
-  margin: auto;
-=======
 #button{
   margin: 10px;
->>>>>>> origin/master
 }

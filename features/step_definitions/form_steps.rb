@@ -11,7 +11,7 @@ end
 World(WithinHelpers)
 
 Given(/^I am a user on the "([^"]*)" page who wants to "([^"]*)"$/) do |page_name, action|
-  visit(page_name)
+  visit path_to(page_name)
 end
 
 Then(/^I should see input boxes labeled with the following: "([^"]*)"$/) do |list_of_boxes|
@@ -45,10 +45,6 @@ Given(/^I can fill in input box "([^"]*)" with "([^"]*)"$/) do |box, input|
   fill_in(box, :with => input)
 end
 
-
-And (/^I fill in input box "[^"]*" with "([^"]*)"$/) do |box, input|
-  pending
-end 
 
 And (/^I attach my release form "([^"]*)"$/) do |form|
   pending
