@@ -1,0 +1,7 @@
+.container
+  .info
+    %h1 Poem was successfully submitted.
+    %span
+    %br
+    %footer.footer
+      = button_to 'Submit another poem', { action: "new" },  :method => :get, :id => "button", :class=>"button"

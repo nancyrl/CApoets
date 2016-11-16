@@ -6,90 +6,63 @@
   },
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/workspace/CApoets/app/controllers/poems_controller.rb": [
+      "/home/ubuntu/workspace/poets/CApoets/app/controllers/poems_controller.rb": [
         1,
         1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        0,
-        0,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/CApoets/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/CApoets/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/CApoets/app/helpers/welcome_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/CApoets/app/models/poem.rb": [
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/CApoets/app/uploaders/attachment_uploader.rb": [
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
+        2,
         null,
         null,
         1,
         0,
         null,
         null,
+        1,
         null,
         null,
         null,
+        1,
+        2,
+        2,
+        0,
+        null,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/poets/CApoets/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/poets/CApoets/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/poets/CApoets/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/poets/CApoets/app/models/poem.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/poets/CApoets/app/uploaders/attachment_uploader.rb": [
+        1,
         null,
         null,
         null,
+        1,
+        1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
         null,
         null,
         null,
@@ -104,9 +77,35 @@
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
-      "/home/ubuntu/workspace/CApoets/app/uploaders/release_uploader.rb": [
+      "/home/ubuntu/workspace/poets/CApoets/app/uploaders/release_uploader.rb": [
         1,
         null,
         null,
@@ -159,6 +158,6 @@
         null
       ]
     },
-    "timestamp": 1479174952
+    "timestamp": 1479271281
   }
 }
