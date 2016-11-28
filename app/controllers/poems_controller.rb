@@ -11,6 +11,16 @@ class PoemsController < ApplicationController
     
     end
     
+    def approve 
+        poem = Poem.find(params[:id])
+        poem.update_attribute(:status, "Approved")
+    end
+    
+    def reject
+        poem = Poem.find(params[:id])
+        poem.update_attribute(:status, "Rejected")
+    end
+    
     def create
         @poem = Poem.new(poem_params)
         if @poem.save
