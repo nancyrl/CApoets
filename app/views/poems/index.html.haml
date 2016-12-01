@@ -1,32 +1,139 @@
-%h1 List of all Poems in Database
+= stylesheet_link_tag "admindash"
 
-%table#poems
-  %thead
-    %tr
-      %th Poet-Teacher Name
-      %th County
-      %th Email
-      %th Student Name
-      %th School
-      %th Grade
-      %th Teacher Name
-      %th Title of Poem
-      %th Poem/Images
-      %th Release
-      %th Approval
-  %tbody
-    - @poems.each do |poem|
-      %tr
-        %td= poem.teacher_name 
-        %td= poem.county
-        %td= poem.email
-        %td= poem.student_name
-        %td= poem.school
-        %td= poem.grade
-        %td= poem.student_teacher_name
-        %td= poem.title
-        %td= link_to "Download", poem.attachment_url
-        %td= link_to "Download", poem.release_url
-        %td= poem.approval
+.rightbutton= link_to 'Log Out', destroy_user_session_path, :method=>'delete'
 
-= link_to 'Add new poem', new_poem_path
+%h1 List of All Submitted Poems in Database
+
+.container
+	%ul.tabs
+		%li.tab-link.current{"data-tab" => "tab-1"} All Poems
+		%li.tab-link{"data-tab" => "tab-2"} Pending Approval
+		%li.tab-link{"data-tab" => "tab-3"} Approved Poems
+		%li.tab-link{"data-tab" => "tab-4"} Rejected Poems
+	#tab-1.tab-content.current
+		%table#poems
+			%thead
+				%tr
+					%th Poet Teacher
+					%th County
+					%th Email
+					%th Student Name
+					%th School
+					%th Grade
+					%th Teacher
+					%th Title of Poem
+					%th Status
+					%th Poem/Images
+					%th Release
+			%tbody
+				- @poems.each do |poem|
+					%tr
+						%td= poem.teacher_name 
+						%td= poem.county
+						%td= poem.email
+						%td= poem.student_name
+						%td= poem.school
+						%td= poem.grade
+						%td= poem.student_teacher_name
+						%td= poem.title
+						%td= poem.status
+						%td= link_to "Download", poem.attachment_url
+						%td= link_to "Download", poem.release_url
+	#tab-2.tab-content
+		%table#poems
+			%thead
+				%tr
+					%th Poet Teacher
+					%th County
+					%th Email
+					%th Student Name
+					%th School
+					%th Grade
+					%th Teacher
+					%th Title of Poem
+					%th Status
+					%th Poem/Images
+					%th Release
+					%th Approve
+					%th Reject
+			%tbody
+				- @poems.each do |poem| 
+					- if poem.status == "Pending"
+						%tr
+							%td= poem.teacher_name 
+							%td= poem.county
+							%td= poem.email
+							%td= poem.student_name
+							%td= poem.school
+							%td= poem.grade
+							%td= poem.student_teacher_name
+							%td= poem.title
+							%td= poem.status
+							%td= link_to "Download", poem.attachment_url
+							%td= link_to "Download", poem.release_url  
+							%td= button_to( "Approve", approve_poem_path(poem.id))
+							%td= button_to( "Reject", reject_poem_path(poem.id))
+	#tab-3.tab-content
+		%table#poems
+			%thead
+				%tr
+					%th Poet Teacher
+					%th County
+					%th Email
+					%th Student Name
+					%th School
+					%th Grade
+					%th Teacher
+					%th Title of Poem
+					%th Status
+					%th Poem/Images
+					%th Release
+			%tbody
+				- @poems.each do |poem| 
+					- if poem.status == "Approved"
+						%tr
+							%td= poem.teacher_name 
+							%td= poem.county
+							%td= poem.email
+							%td= poem.student_name
+							%td= poem.school
+							%td= poem.grade
+							%td= poem.student_teacher_name
+							%td= poem.title
+							%td= poem.status
+							%td= link_to "Download", poem.attachment_url
+							%td= link_to "Download", poem.release_url
+							%td= button_to( "Reject", reject_poem_path(poem.id))
+	#tab-4.tab-content
+		%table#poems
+			%thead
+				%tr
+					%th Poet Teacher
+					%th County
+					%th Email
+					%th Student Name
+					%th School
+					%th Grade
+					%th Teacher
+					%th Title of Poem
+					%th Status
+					%th Poem/Images
+					%th Release
+			%tbody
+				- @poems.each do |poem| 
+					- if poem.status == "Rejected"
+						%tr
+						%td= poem.teacher_name 
+						%td= poem.county
+						%td= poem.email
+						%td= poem.student_name
+						%td= poem.school
+						%td= poem.grade
+						%td= poem.student_teacher_name
+						%td= poem.title
+						%td= poem.status
+						%td= link_to "Download", poem.attachment_url
+						%td= link_to "Download", poem.release_url
+						%td= button_to( "Approve", approve_poem_path(poem.id))
+					
+// = link_to 'Add new poem', new_poem_path

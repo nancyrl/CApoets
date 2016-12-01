@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  
+  resources :poems do
+    member do
+      post 'approve'
+      post 'reject'
+    end
+  end 
+  
+  get '/submitted/', to: 'poems#submitted'
+  
+  devise_for :users
+  authenticated :user do 
+    root 'poems#index', as: :authenticated_root
+  end
+  
+  unauthenticated :user do
+    root 'admin#index', as: :unauthenticated_root
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -10,7 +29,6 @@ Rails.application.routes.draw do
   resource :poems do
     get '/home/', to: 'poems#home'
   end
-  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

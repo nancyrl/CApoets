@@ -57,3 +57,4 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem "mini_magick"
 gem 'simple_form'
 gem 'will_paginate', '~> 3.1.0'
+gem 'devise'
