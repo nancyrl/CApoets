@@ -13,6 +13,7 @@
       %th Title of Poem
       %th Poem/Images
       %th Release
+      %th Approval
   %tbody
     - @poems.each do |poem|
       %tr
@@ -26,5 +27,6 @@
         %td= poem.title
         %td= link_to "Download", poem.attachment_url
         %td= link_to "Download", poem.release_url
+        %td= poem.approval
 
 = link_to 'Add new poem', new_poem_path

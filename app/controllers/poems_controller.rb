@@ -7,8 +7,29 @@ class PoemsController < ApplicationController
         @poems = Poem.all
     end
     
+    def show
+        id = params[:id]
+        @poem = Poem.find(id)
+        @url_test = request.base_url
+        @url_test = "http://" + @url_test[8, @url_test.length]
+        #@embed_url = "https://docs.google.com/gview?url=" + @poem.attachment_url + "&embedded=true"
+        #https://your-project-name-jeremyou.c9users.io/uploads/poem/attachment/17/sample.docx
+        #<iframe class="doc" src="https://docs.google.com/gview?url=http://writing.engr.psu.edu/workbooks/formal_report_template.doc&embedded=true"></iframe>
+
+    end
+    
     def new
     
+    end
+    
+    def approve 
+        poem = Poem.find(params[:id])
+        poem.update_attribute(:approval, "Approved")
+    end
+    
+    def reject
+        poem = Poem.find(params[:id])
+        poem.update_attribute(:approval, "Rejected")
     end
     
     def create
@@ -19,5 +40,9 @@ class PoemsController < ApplicationController
             flash[:warning] = "Missing Fields"
             render new_poem_path
         end
+    end
+    
+    def home
+        @poems = Poem.order(:created_at).reverse_order.paginate(page: params[:page], per_page: 9)
     end
 end

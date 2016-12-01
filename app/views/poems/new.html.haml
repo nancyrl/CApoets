@@ -10,7 +10,7 @@
         %h2 Poet-Teacher Information
         .form-row
           .input-group
-            = label :poem, :teacher_name, 'Name'
+            = label :poem, :teacher_name, 'Poet Teacher Name'
             = text_field :poem, :teacher_name, :class=> "form-control", :placeholder => 'ex: Jennifer Yip'
         .form-row
           .input-group
@@ -53,14 +53,14 @@
           .form-row
             .input-group
               = label :poem, :attachment, 'Attach Poem/Images'
-              = file_field :poem, :attachment, :id => "button"
+              = file_field :poem, :attachment, :id => "poem_button"
           -#.form-row
           -#  .input-group
           -#    %img#preview{:alt => "preview", :src => "http://golloscdn.com/common/no-image.jpg"} 
           .form-row
             .input-group
               = label :poem, :release, 'Release Form'
-              = file_field :poem, :release, :id => "button"
+              = file_field :poem, :release, :id => "release_button"
           %br
       -#= button_tag 'Add another student', :id => "addStudent", :type=>"button"
     %br

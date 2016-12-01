@@ -4,8 +4,13 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   resources :poems
-  root 'poems#index'
-  get '/submitted/', to: 'poems#submitted'
+  root 'poems#home'
+  get '/submitted/', to: 'poems#submitted'  
+  
+  resource :poems do
+    get '/home/', to: 'poems#home'
+  end
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

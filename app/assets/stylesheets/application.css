@@ -188,7 +188,15 @@ form label.header {
 }
 
 lesshat-selector {
-  -lh-property: 0; } 
+  -lh-property: 0; }
+  
+.message#warning {
+  color: red;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+  font-style: italic;
+}
   
 @-webkit-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 @-moz-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}

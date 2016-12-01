@@ -49,3 +49,12 @@ end
 And (/^I attach my release form "([^"]*)"$/) do |form|
   pending
 end
+
+Given(/^I select "([^"]*)" with "([^"]*)"$/) do |arg1, arg2|
+  page.select(arg2, :from => arg1)
+end
+
+Given(/^I attach "([^"]*)" with "([^"]*)"$/) do |arg1, arg2|
+  page.attach_file(arg1, File.expand_path(arg2))
+end
+

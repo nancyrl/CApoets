@@ -9,6 +9,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '3.4.2'
   gem 'ZenTest', '4.11.0'
+  gem 'rerun'
 end
 
 group :test do
@@ -55,3 +56,4 @@ gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem "mini_magick"
 gem 'simple_form'
+gem 'will_paginate', '~> 3.1.0'
