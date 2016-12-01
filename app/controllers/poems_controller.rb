@@ -13,19 +13,26 @@ class PoemsController < ApplicationController
     
     def approve 
         poem = Poem.find(params[:id])
-        poem.update_attribute(:status, "Approved")
+        poem.update_attributes(:status => "Approved")
+        flash[:notice] = "You successfully approved this poem."
+        redirect_to authenticated_root_url
     end
     
     def reject
         poem = Poem.find(params[:id])
-        poem.update_attribute(:status, "Rejected")
+        poem.update_attributes(:status => "Rejected")
+        flash[:notice] = "You successfully reject this poem."
+        redirect_to authenticated_root_url
+    end
+    
+    def show
+    
     end
     
     def create
         @poem = Poem.new(poem_params)
         if @poem.save
-            flash[:notice] = "You successfully submitted a poem."
-            redirect_to poems_path
+            redirect_to submitted_path
         else
             flash[:warning] = "Missing Fields"
             render new_poem_path

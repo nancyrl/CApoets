@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   
-  resources :poems
+  resources :poems do
+    member do
+      post 'approve'
+      post 'reject'
+    end
+  end 
+  
+  get '/submitted/', to: 'poems#submitted'
+  
   devise_for :users
   authenticated :user do 
     root 'poems#index', as: :authenticated_root

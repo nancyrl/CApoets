@@ -1,6 +1,6 @@
 body {
   background: #FBFBFB;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Open Sans', sans-serif;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
@@ -9,12 +9,13 @@ body {
 }
 
 h1 {
+	padding: 20px;
 	text-align: center;
 }
 
 .container{
-			width: 1300px;
-			margin: 0 auto;
+	width: 1400px;
+	margin: 0 auto;
 }
 
 ul.tabs{
@@ -27,8 +28,10 @@ ul.tabs li{
 	background: none;
 	color: #222;
 	display: inline-block;
-	padding: 10px 15px;
+	padding: 15px 45px;
 	cursor: pointer;
+	text-align: center;
+	font-size: 15px;
 }
 
 ul.tabs li.current{
@@ -45,3 +48,16 @@ ul.tabs li.current{
 .tab-content.current{
 	display: inherit;
 }		
+
+table {
+  table-layout: fixed;
+  width: 1400px;
+  font-size: 12px;
+  text-align: left;
+}
+
+th, td {
+  overflow: hidden;
+  width: 100px;
+  padding-bottom: 15px;
+}

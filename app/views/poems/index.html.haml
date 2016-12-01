@@ -2,7 +2,7 @@
 
 .rightbutton= link_to 'Log Out', destroy_user_session_path, :method=>'delete'
 
-%h1 List of all Poems in Database
+%h1 List of All Submitted Poems in Database
 
 .container
 	%ul.tabs
@@ -14,13 +14,13 @@
 		%table#poems
 			%thead
 				%tr
-					%th Poet-Teacher Name
+					%th Poet Teacher
 					%th County
 					%th Email
 					%th Student Name
 					%th School
 					%th Grade
-					%th Teacher Name
+					%th Teacher
 					%th Title of Poem
 					%th Status
 					%th Poem/Images
@@ -43,13 +43,13 @@
 		%table#poems
 			%thead
 				%tr
-					%th Poet-Teacher Name
+					%th Poet Teacher
 					%th County
 					%th Email
 					%th Student Name
 					%th School
 					%th Grade
-					%th Teacher Name
+					%th Teacher
 					%th Title of Poem
 					%th Status
 					%th Poem/Images
@@ -71,20 +71,19 @@
 							%td= poem.status
 							%td= link_to "Download", poem.attachment_url
 							%td= link_to "Download", poem.release_url  
-							%td= button_to 'Approve'  
-							%td= button_to 'Reject'
-	
+							%td= button_to( "Approve", approve_poem_path(poem.id))
+							%td= button_to( "Reject", reject_poem_path(poem.id))
 	#tab-3.tab-content
 		%table#poems
 			%thead
 				%tr
-					%th Poet-Teacher Name
+					%th Poet Teacher
 					%th County
 					%th Email
 					%th Student Name
 					%th School
 					%th Grade
-					%th Teacher Name
+					%th Teacher
 					%th Title of Poem
 					%th Status
 					%th Poem/Images
@@ -104,17 +103,18 @@
 							%td= poem.status
 							%td= link_to "Download", poem.attachment_url
 							%td= link_to "Download", poem.release_url
+							%td= button_to( "Reject", reject_poem_path(poem.id))
 	#tab-4.tab-content
 		%table#poems
 			%thead
 				%tr
-					%th Poet-Teacher Name
+					%th Poet Teacher
 					%th County
 					%th Email
 					%th Student Name
 					%th School
 					%th Grade
-					%th Teacher Name
+					%th Teacher
 					%th Title of Poem
 					%th Status
 					%th Poem/Images
@@ -134,5 +134,6 @@
 						%td= poem.status
 						%td= link_to "Download", poem.attachment_url
 						%td= link_to "Download", poem.release_url
+						%td= button_to( "Approve", approve_poem_path(poem.id))
 					
 // = link_to 'Add new poem', new_poem_path
