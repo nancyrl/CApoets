@@ -1,3 +1,5 @@
+//Javascript for the poem boxes in the gallery
+
 $(document).ready(function () {
     $('.poems_box').click(function() {
         let redir_link = "/poems/"

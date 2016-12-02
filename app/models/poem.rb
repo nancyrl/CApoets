@@ -17,6 +17,4 @@ class Poem < ActiveRecord::Base
         return true if self.status == 'Approved'
         return false
     end
-    
->>>>>>> 10b6f8c74f211ddee2bcf445b8fe5864fcf594ad
 end

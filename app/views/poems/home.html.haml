@@ -14,14 +14,12 @@
       = link_to 'Back to California Poets', 'http://www.californiapoets.org/'
     #main
       
-
   %poems_container{:id => "poems_container"}
     - @poems.each do |poem|
       .poems_box{:id => "poem#{poem.id}"}
         %h1.poems_title{:id => "poem_title#{poem.id}"}= poem.title
         %p.poems_text{:id => "poem_text_#{poem.id}"}= poem.poem
         %span.author_name=poem.student_name
-        
         
   %span.ending_line
     Help us continue our program one line can change a life

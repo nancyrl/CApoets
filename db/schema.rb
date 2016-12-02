@@ -12,6 +12,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20161201022256) do
+
   create_table "item_wrappers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -29,9 +30,9 @@ ActiveRecord::Schema.define(version: 20161201022256) do
     t.text     "poem"
     t.string   "release"
     t.string   "school"
-    t.string   "approval",             default: "pending"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status",               default: "Pending"
   end
 
   create_table "users", force: :cascade do |t|

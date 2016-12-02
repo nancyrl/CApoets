@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :poems, except: [:show, :index]
+  
   resources :poems do
     member do
       post 'approve'
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
     end
   end 
   
+  get '/home/', to: 'poems#home'
+  get '/form/', to: 'poems#new'
   get '/submitted/', to: 'poems#submitted'
   
   devise_for :users
@@ -22,14 +26,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  resources :poems
-  root 'poems#home'
-  get '/submitted/', to: 'poems#submitted'  
+  #resources :poems
   
-  resource :poems do
-    get '/home/', to: 'poems#home'
-  end
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
