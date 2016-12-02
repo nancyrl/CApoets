@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
-  resources :poems, except: [:show, :index]
   
-  resources :poems do
+  
+  resources :poems, except: [:index] do
     member do
       post 'approve'
       post 'reject'
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/home/', to: 'poems#home'
   get '/form/', to: 'poems#new'
   get '/submitted/', to: 'poems#submitted'
+  get '/admin/', to: 'admin#index'
   
   devise_for :users
   authenticated :user do 
@@ -19,9 +20,10 @@ Rails.application.routes.draw do
   end
   
   unauthenticated :user do
-    root 'admin#index', as: :unauthenticated_root
+   get '/poems/', to: 'poems#home'
   end
 
+  root to: 'poems#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

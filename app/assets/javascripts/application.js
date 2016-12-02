@@ -14,6 +14,7 @@
 // = require jquery_ujs
 // = require turbolinks
 // = require_tree .
+// = require tinymce
 
 $(document).ready(function(){
 	$('ul.tabs li').click(function(){
@@ -22,6 +23,5 @@ $(document).ready(function(){
 		$('.tab-content').removeClass('current');
 		$(this).addClass('current');
 		$("#"+tab_id).addClass('current');
-	})
-
-})
+	});
+});

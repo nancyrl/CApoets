@@ -28,7 +28,7 @@ class PoemsController < ApplicationController
     def reject
         poem = Poem.find(params[:id])
         poem.update_attributes(:status => "Rejected")
-        flash[:notice] = "You successfully reject this poem."
+        flash[:notice] = "You successfully rejected this poem."
         redirect_to authenticated_root_url
     end
     
@@ -37,7 +37,6 @@ class PoemsController < ApplicationController
         if @poem.save
             redirect_to submitted_path
         else
-            flash[:warning] = "Missing Fields"
             render new_poem_path
         end
     end

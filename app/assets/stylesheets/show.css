@@ -37,6 +37,6 @@ li {
 }
 
 poemtext {
-  font-size: 20px;
+  /*font-size: 20px;*/
   font-family: georgia, palatino, "book antiqua", "palatino linotype", serif;
 }

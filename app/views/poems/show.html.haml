@@ -26,7 +26,8 @@
       = @poem.county
     %li
       = link_to "Download", @poem.attachment_url
-    
-%poemtext
-  = simple_format(@poem.poem)
+   
+.wrapper 
+  %poemtext
+    = simple_format(@poem.poem)
   

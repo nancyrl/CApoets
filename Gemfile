@@ -58,3 +58,4 @@ gem "mini_magick"
 gem 'simple_form'
 gem 'will_paginate', '~> 3.1.0'
 gem 'devise'
+gem 'tinymce-rails'
