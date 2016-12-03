@@ -4,7 +4,7 @@ class PoemsController < ApplicationController
     end
     
     def index
-        @poems = Poem.all
+        @poems = Poem.all.order('created_at DESC')
     end
     
     def show

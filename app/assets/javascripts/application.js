@@ -10,11 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 // = require jquery
 // = require jquery_ujs
 // = require turbolinks
-// = require_tree .
-// = require tinymce
+// = require_tree . 
 
 $(document).ready(function(){
 	$('ul.tabs li').click(function(){
@@ -25,3 +25,4 @@ $(document).ready(function(){
 		$("#"+tab_id).addClass('current');
 	});
 });
+

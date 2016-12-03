@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # ruby '2.3.0' #Ruby version we're running
 group :development, :test do
   gem 'sqlite3'
@@ -58,4 +57,4 @@ gem "mini_magick"
 gem 'simple_form'
 gem 'will_paginate', '~> 3.1.0'
 gem 'devise'
-gem 'tinymce-rails'
+# gem 'tinymce-rails'

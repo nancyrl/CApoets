@@ -31,6 +31,7 @@
 					%th Status
 					%th Poem/Images
 					%th Release
+					%th Submission Date
 					%th Approve
 					%th Reject
 			%tbody
@@ -48,6 +49,7 @@
 							%td= poem.status
 							%td= link_to "Download", poem.attachment_url
 							%td= link_to "Download", poem.release_url  
+							%td= poem.created_at.to_date.strftime("%B %d, %Y")
 							%td= button_to( "Approve", approve_poem_path(poem.id))
 							%td= button_to( "Reject", reject_poem_path(poem.id))
 							
@@ -66,6 +68,7 @@
 					%th Status
 					%th Poem/Images
 					%th Release
+					%th Submission Date
 			%tbody
 				- @poems.each do |poem|
 					%tr
@@ -80,6 +83,7 @@
 						%td= poem.status
 						%td= link_to "Download", poem.attachment_url
 						%td= link_to "Download", poem.release_url
+						%td= poem.created_at.to_date.strftime("%B %d, %Y")
 	#tab-3.tab-content
 		%table#poems
 			%thead
@@ -95,6 +99,7 @@
 					%th Status
 					%th Poem/Images
 					%th Release
+					%th Submission Date
 			%tbody
 				- @poems.each do |poem| 
 					- if poem.status == "Approved"
@@ -110,6 +115,7 @@
 							%td= poem.status
 							%td= link_to "Download", poem.attachment_url
 							%td= link_to "Download", poem.release_url
+							%td= poem.created_at.to_date.strftime("%B %d, %Y")
 							%td= button_to( "Reject", reject_poem_path(poem.id))
 	#tab-4.tab-content
 		%table#poems
@@ -126,6 +132,7 @@
 					%th Status
 					%th Poem/Images
 					%th Release
+					%th Submission Date
 			%tbody
 				- @poems.each do |poem| 
 					- if poem.status == "Rejected"
@@ -141,6 +148,7 @@
 							%td= poem.status
 							%td= link_to "Download", poem.attachment_url
 							%td= link_to "Download", poem.release_url
+							%td= poem.created_at.to_date.strftime("%B %d, %Y")
 							%td= button_to( "Approve", approve_poem_path(poem.id))
 					
 %script

@@ -14,7 +14,7 @@ h1 {
 }
 
 .container{
-	width: 1400px;
+	width: 1450px;
 	margin: 0 auto;
 }
 
@@ -34,9 +34,9 @@ ul.tabs li {
 ul.tabs li a {  
 	display: inline-block;
 	padding: 18px 50px;
-	font-size: 15px;
+	font-size: 14px;
   color: #222;
-  text-decoration: none;
+  text-transform: none;
 }
 
 ul.tabs li a:hover {
@@ -54,16 +54,22 @@ ul.tabs li a:focus, .active {
 	padding: 15px;
 }
 
-
 table {
   table-layout: fixed;
-  width: 1400px;
+  width: 100%;
   font-size: 12px;
   text-align: left;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: #e0e0e0;
 }
 
 th, td {
+  max-width: 0;
   overflow: hidden;
-  width: 100px;
-  padding-bottom: 15px;
+  word-wrap: break-word;
+  padding-bottom: 5px;
+  height: 70px;
 }

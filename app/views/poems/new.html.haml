@@ -50,8 +50,9 @@
           .form-row
             .input-group
               = label :poem, :poem, 'Poem'
-              // = text_area :poem, 'poem', :class => "tiny_mce", :id => "poem_entry", :placeholder => 'ex: sample poem', :class=> "form-control"
-              = text_area :poem, 'poem', :class => "tiny_mce", :id => "poem_entry", :placeholder => 'ex: sample poem'
+              // = text_area :poem, 'poem', :class => "tiny_mce", :id => "poem_entry", :placeholder => 'ex: sample poem'
+              // = tinymce :theme => "simple", :language => "de", :plugins => ["wordcount", "paste"]
+              = text_area :poem, 'poem', :class => "entry_box", :id => "poem_entry", :placeholder => 'ex: sample poem', :class=> "form-control"
           .form-row
             .input-group
               = label :poem, :attachment, 'Attach Poem/Images'
@@ -63,7 +64,7 @@
           .form-row
             .input-group
               = label :poem, :release, 'Release Form'
-              %p *Download a new Student Release form with the Secure Log In <a href="http://www.californiapoets.org/secure-login" target="_blank">here</a>
+              %p *Download a new Student Release form with the Secure Log In <a href="http://www.californiapoets.org/secure-login" target="_blank">here</a>.
               = file_field :poem, :release, :id => "release_button", :err => 'Release Form'
           %br
       -#= button_tag 'Add another student', :id => "addStudent", :type=>"button"
