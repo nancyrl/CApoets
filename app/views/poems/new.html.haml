@@ -50,8 +50,6 @@
           .form-row
             .input-group
               = label :poem, :poem, 'Poem'
-              // = text_area :poem, 'poem', :class => "tiny_mce", :id => "poem_entry", :placeholder => 'ex: sample poem'
-              // = tinymce :theme => "simple", :language => "de", :plugins => ["wordcount", "paste"]
               = text_area :poem, 'poem', :class => "entry_box", :id => "poem_entry", :placeholder => 'ex: sample poem', :class=> "form-control"
           .form-row
             .input-group

@@ -17,6 +17,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor' #Heroku-specific production settings
+  gem 'therubyracer'
 end
 
 gem 'haml-rails', '>= 0.3.4'
@@ -29,7 +30,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'therubyracer'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
