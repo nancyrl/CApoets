@@ -14,6 +14,8 @@ engines:
       - javascript
       - python
       - php
+    exclude_paths:
+      - public/
   eslint:
     enabled: true
   fixme:
@@ -42,4 +44,3 @@ exclude_paths:
 - script/
 - spec/
 - vendor/
-- public/
