@@ -18,6 +18,15 @@ module NavigationHelpers
       
     when /^new poem$/
       new_poem_path
+      
+    when /^admin$/
+      '/admin'
+    
+    when /^Log in$/
+      new_user_session_path
+      
+    when /^Sign up$/
+      new_user_registration_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

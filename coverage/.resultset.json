@@ -1,12 +1,28 @@
 {
   "RSpec": {
     "coverage": {
+      "/home/ubuntu/workspace/CApoets/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/CApoets/app/models/item_wrapper.rb": [
+        1,
+        null
+      ]
     },
-    "timestamp": 1477439931
+    "timestamp": 1480814423
   },
   "Cucumber Features": {
     "coverage": {
+      "/home/ubuntu/workspace/CApoets/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ]
     },
-    "timestamp": 1479804466
+    "timestamp": 1480814428
   }
 }
