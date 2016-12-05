@@ -12,19 +12,14 @@ module NavigationHelpers
   #
   def path_to(page_name)
     case page_name
-
     when /^the home\s?page$/
       '/'
-      
     when /^new poem$/
       new_poem_path
-      
     when /^admin$/
-      '/admin'
-    
+      admin_path
     when /^Log in$/
       new_user_session_path
-      
     when /^Sign up$/
       new_user_registration_path
 

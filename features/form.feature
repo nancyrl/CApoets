@@ -1,18 +1,17 @@
 Feature: Submission form for poet-teachers
 
   As a poet teacher
-  I want to be able to submit my student's poems to the yearly anthology and poets of california webpage
+  I want to be able to submit my student's poems
   
 Scenario: I am a user on the webpage who wants to submit my poem 
 Given I am a user on the "new poem" page who wants to "submit a poem"
 Then I should see input boxes labeled with the following: "Poet Teacher Name, Email, Student Name, Grade, Poem Title, School, County, Attach Poem/Images, Release Form"
 Then I should see input boxes labeled with the following: "Poem"
-#Then I should see upload boxes labed with the following: "Attach Poem/Images, Release Form"
 
 Scenario: I am a user and I click submit without filling the form
 Given I am a user on the "new poem" page who wants to "submit a poem"
 And I press "Submit the poem"
-Then it should flash "Missing Fields"
+Then it should flash "Please fill in Missing Fields."
 
 Scenario: I can fill in the inputs
 Given I am a user on the "new poem" page who wants to "submit a poem"
@@ -33,7 +32,7 @@ And I fill in "Student Name" with "Student Name"
 And I fill in "Poem Title" with "Sample title"
 And I fill in "Poem" with "Sample Poem"
 When I press "Submit the poem"
-Then I should see "Missing Fields"
+Then I should see "Please fill in Missing Fields."
 
 Scenario: I can submit a form and submit another form
 Given I am a user on the "new poem" page who wants to "submit a poem"

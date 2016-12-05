@@ -37,6 +37,7 @@ class PoemsController < ApplicationController
         if @poem.save
             redirect_to submitted_path
         else
+            flash[:warning] = "Please fill in Missing Fields."
             render new_poem_path
         end
     end

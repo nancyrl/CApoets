@@ -25,14 +25,6 @@ Then(/^I should see input boxes labeled with the following: "([^"]*)"$/) do |lis
   end
 end
 
-Then(/^I should see a "([^"]*)" button$/) do |button_name|
-  find_button(button_name)
-end
-
-When(/^I click on the "([^"]*)" button$/) do |button_name|
-  click_button(button_name)
-end
-
 Then(/^it should flash "([^"]*)"$/) do |flashed_message|
   if page.respond_to? :should
     page.should have_content(flashed_message)
@@ -44,7 +36,6 @@ end
 Given(/^I can fill in input box "([^"]*)" with "([^"]*)"$/) do |box, input|
   fill_in(box, :with => input)
 end
-
 
 And (/^I attach my release form "([^"]*)"$/) do |form|
   pending

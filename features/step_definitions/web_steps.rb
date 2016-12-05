@@ -31,6 +31,16 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
+# CUSTOM STEPS USED BY MULTIPLE FEATURES
+
+Then(/^I should see a "([^"]*)" button$/) do |button_name|
+  find_button(button_name)
+end
+
+When(/^I click on the "([^"]*)" button$/) do |button_name|
+  click_button(button_name)
+end
+
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|
   with_scope(parent) { When step }
