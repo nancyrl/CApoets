@@ -11,6 +11,5 @@ FactoryGirl.define do
     poem 'Two roads diverged'
     release { File.open(File.join(Rails.root, '/spec/b.pdf')) }
     school 'a'
-    status 'Pending'
   end
 end
