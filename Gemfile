@@ -59,3 +59,4 @@ gem 'simple_form'
 gem 'will_paginate', '~> 3.1.0'
 gem 'devise'
 # gem 'tinymce-rails'
+gem "factory_girl_rails", "~> 4.0"
