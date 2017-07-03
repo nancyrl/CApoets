@@ -5,7 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/linanc/CApoets/badges/gpa.svg)](https://codeclimate.com/github/linanc/CApoets)
 
 *CodeClimate Badge Sum2017:*
-![Code Climate](https://codeclimate.com/github/jazhao1/CApoet/badges/gpa.svg)](https://codeclimate.com/github/jazhao1/CApoets)
+[![Code Climate](https://codeclimate.com/github/jazhao1/CApoets/badges/gpa.svg)](https://codeclimate.com/github/jazhao1/CApoets)
 
 *Travis CI Badge:*
 [![Build Status](https://travis-ci.org/linanc/CApoets.svg?branch=master)](https://travis-ci.org/linanc/CApoets)
