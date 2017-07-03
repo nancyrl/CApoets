@@ -5,14 +5,20 @@
 [![Code Climate](https://codeclimate.com/github/linanc/CApoets/badges/gpa.svg)](https://codeclimate.com/github/linanc/CApoets)
 
 *CodeClimate Badge Sum2017:*
-[![Test Coverage](https://codeclimate.com/github/rails/rails/badges/coverage.svg)](https://codeclimate.com/github/rails/rails/coverage)
+![Code Climate](https://codeclimate.com/github/rails/rails/badges/gpa.svg)](https://codeclimate.com/github/rails/rails)
 
-
-*Travis CI Badge:*
+*Travis CI Badge legacy:*
 [![Build Status](https://travis-ci.org/linanc/CApoets.svg?branch=master)](https://travis-ci.org/linanc/CApoets)
 
-*Test Coverage Badge*
+*Travis CI Badge Sum2017:*
+[![Build Status](https://travis-ci.org/jazhao1/CApoets.svg?branch=master](https://travis-ci.org/jazhao1/CApoets)
+
+
+*Test Coverage Badge legacy*
 [![Test Coverage](https://codeclimate.com/github/linanc/CApoets/badges/coverage.svg)](https://codeclimate.com/github/linanc/CApoets/coverage)
+
+*Test Coverage Badge Sum2017*
+[![Test Coverage](https://codeclimate.com/github/rails/rails/badges/coverage.svg)](https://codeclimate.com/github/rails/rails/coverage)
 
 *Heroku Link*
 http://capoets.herokuapp.com
