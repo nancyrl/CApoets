@@ -18,7 +18,7 @@
 [![Test Coverage](https://codeclimate.com/github/linanc/CApoets/badges/coverage.svg)](https://codeclimate.com/github/linanc/CApoets/coverage)
 
 *Test Coverage Badge Sum2017*
-[![Test Coverage](https://codeclimate.com/github/jazhao1/CApoet/badges/coverage.svg)](https://codeclimate.com/github/jazhao1/CApoet/coverage)
+[![Test Coverage](https://codeclimate.com/github/jazhao1/CApoets/badges/coverage.svg)](https://codeclimate.com/github/jazhao1/CApoets/coverage)
 
 *Heroku Link*
 http://capoets.herokuapp.com
