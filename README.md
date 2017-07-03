@@ -11,7 +11,7 @@
 [![Build Status](https://travis-ci.org/linanc/CApoets.svg?branch=master)](https://travis-ci.org/linanc/CApoets)
 
 *Travis CI Badge Sum2017:*
-[![Build Status](https://travis-ci.org/jazhao1/CApoebundlets.svg?branch=master](https://travis-ci.org/jazhao1/CApoets)
+[![Build Status](https://travis-ci.org/jazhao1/CApoets.svg?branch=master)](https://travis-ci.org/jazhao1/CApoets)
 
 
 *Test Coverage Badge*
