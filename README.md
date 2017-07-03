@@ -1,8 +1,12 @@
 **California Poets in Schools**
 169 Fall 2016
 
-*CodeClimate Badge:*
+*CodeClimate Badge legacy:*
 [![Code Climate](https://codeclimate.com/github/linanc/CApoets/badges/gpa.svg)](https://codeclimate.com/github/linanc/CApoets)
+
+*CodeClimate Badge Sum2017:*
+[![Test Coverage](https://codeclimate.com/github/rails/rails/badges/coverage.svg)](https://codeclimate.com/github/rails/rails/coverage)
+
 
 *Travis CI Badge:*
 [![Build Status](https://travis-ci.org/linanc/CApoets.svg?branch=master)](https://travis-ci.org/linanc/CApoets)
