@@ -10,4 +10,5 @@ after_script:
   - bundle exec rake send_to_codeclimate 
 addons:
   code_climate:
-    - repo_token: 2f7dd05002468f75fc10803487c6ca5295b1a284e774fbe65d1e34921d51ffe5
+    # - repo_token: 2f7dd05002468f75fc10803487c6ca5295b1a284e774fbe65d1e34921d51ffe5
+    - repo_token: f21bc9a324a316561ad18847382d54ad4367f4f2adae73147d4450c4b1b467b6
