@@ -27,7 +27,7 @@
 http://capoets.herokuapp.com
 
 *Pivotal Tracker Link*
-https://www.pivotaltracker.com/n/projects/1886675
+https://www.pivotaltracker.com/n/projects/2071017
 
 
 This project will extend functionality for an existing website (CaliforniaPoets.org),
