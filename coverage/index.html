@@ -14,18 +14,18 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-13T15:21:33-07:00">2017-07-13T15:21:33-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-13T15:47:47-07:00">2017-07-13T15:47:47-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">54.55%</span></span>
+    (<span class="covered_percent"><span class="red">56.36%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.3
+         2.45
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>6</b> files in total.
     <b>55</b> relevant lines. 
-    <span class="green"><b>30</b> lines covered</span> and
-    <span class="red"><b>25</b> lines missed </span>
+    <span class="green"><b>31</b> lines covered</span> and
+    <span class="red"><b>24</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -67,17 +67,17 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>13.9</td>
+        <td>14.7</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#48b2e6cddf55dca405ccf2708a8ac0d94b446d39" class="src_link" title="app/controllers/poems_controller.rb">app/controllers/poems_controller.rb</a></td>
-        <td class="red strong">34.48 %</td>
+        <td class="red strong">37.93 %</td>
         <td>48</td>
         <td>29</td>
-        <td>10</td>
-        <td>19</td>
-        <td>0.5</td>
+        <td>11</td>
+        <td>18</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
@@ -248,20 +248,20 @@
           <code class="ruby">  def set_cache_buster</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="11">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="33" data-linenumber="11">
+          <span class="hits">33</span>
           
           <code class="ruby">    response.headers[&quot;Cache-Control&quot;] = &quot;no-cache, no-store, max-age=0, must-revalidate&quot;</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="12">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="33" data-linenumber="12">
+          <span class="hits">33</span>
           
           <code class="ruby">    response.headers[&quot;Pragma&quot;] = &quot;no-cache&quot;</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="13">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="33" data-linenumber="13">
+          <span class="hits">33</span>
           
           <code class="ruby">    response.headers[&quot;Expires&quot;] = &quot;Fri, 01 Jan 1990 00:00:00 GMT&quot;</code>
         </li>
@@ -291,11 +291,11 @@
         <div class="source_table" id="48b2e6cddf55dca405ccf2708a8ac0d94b446d39">
   <div class="header">
     <h3>app/controllers/poems_controller.rb</h3>
-    <h4><span class="red">34.48 %</span> covered</h4>
+    <h4><span class="red">37.93 %</span> covered</h4>
     <div>
       <b>29</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>19</b> lines missed.</span>
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>18</b> lines missed.</span>
     </div>
   </div>
   
@@ -572,8 +572,8 @@
           <code class="ruby">    def home</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="46">
-          
+        <li class="covered" data-hits="2" data-linenumber="46">
+          <span class="hits">2</span>
           
           <code class="ruby">        @poems = Poem.where(&quot;status = &#39;Approved&#39;&quot;).order(:created_at).reverse_order.paginate(page: params[:page], per_page: 9)</code>
         </li>
