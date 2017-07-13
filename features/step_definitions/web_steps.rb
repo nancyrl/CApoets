@@ -263,4 +263,6 @@
 #   save_and_open_page
 # end
 
-
+Given /I am a reader on the "(.*)" page/ do |page|
+    pending
+end

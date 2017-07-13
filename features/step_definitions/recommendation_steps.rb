@@ -1,11 +1,3 @@
-Given /I am a reader on the "(.*)" page who wants to "(.*)"/ do |page, action|
-    pending
-end
-
-Then /I press the "(.*)" button/ do |button|
-    pending
-end
-
 Then /I should see a "(.*)" page/ do |page|
     pending
 end
