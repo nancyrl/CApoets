@@ -1,26 +1,14 @@
 **California Poets in Schools**
 169 Fall 2016
 
-*CodeClimate Badge:*
-[![Code Climate](https://codeclimate.com/github/linanc/CApoets/badges/gpa.svg)](https://codeclimate.com/github/linanc/CApoets)
-
-*CodeClimate Badge Sum2017:*
+*CodeClimate Badge*
 [![Code Climate](https://codeclimate.com/github/jazhao1/CApoets/badges/gpa.svg)](https://codeclimate.com/github/jazhao1/CApoets)
 
-*Travis CI Badge:*
-[![Build Status](https://travis-ci.org/linanc/CApoets.svg?branch=master)](https://travis-ci.org/linanc/CApoets)
-
-*Travis CI Badge Sum2017:*
+*Travis CI Badge*
 [![Build Status](https://travis-ci.org/jazhao1/CApoets.svg?branch=master)](https://travis-ci.org/jazhao1/CApoets)
 
 
 *Test Coverage Badge*
-[![Test Coverage](https://codeclimate.com/github/linanc/CApoets/badges/coverage.svg)](https://codeclimate.com/github/linanc/CApoets/coverage)
-
-*Test Coverage Badge Sum2017*
-[![Test Coverage](https://codeclimate.com/github/jazhao1/CApoets/badges/coverage.svg)](https://codeclimate.com/github/jazhao1/CApoets/coverage)
-
-*Test Coverage Badge Sum2017 2*
 [![Test Coverage](https://codeclimate.com/github/jazhao1/CApoets/badges/coverage.svg)](https://codeclimate.com/github/jazhao1/CApoets/coverage)
 
 *Heroku Link*
@@ -29,7 +17,7 @@ http://capoets.herokuapp.com
 *Pivotal Tracker Link*
 https://www.pivotaltracker.com/n/projects/2071017
 
-
+https://travis-ci.org/jazhao1/CApoets.svg?branch=master
 This project will extend functionality for an existing website (CaliforniaPoets.org),
 a non-profit organization for poet teachers and students. 
 
