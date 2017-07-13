@@ -43,5 +43,3 @@ Scenario: I am viewing Poem 3 in detail
 Then I click the box "ApprovedPoem3"
 Then I should see "to"
 
-
-
