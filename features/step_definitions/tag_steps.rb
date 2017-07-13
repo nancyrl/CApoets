@@ -6,10 +6,10 @@ And /I can select "(.*)"/ do |label|
     pending
 end
 
-Given /exists a poem with tags : "(.*)"/ do |labels|
+Given /There exists a poem with tags : "(.*)"/ do |labels|
     pending
 end
 
-Then /I should see a poem with tags : "(.*)"/ do |labels|
+Then(/^I should see a poem with tags: "(.*)"$/) do |labels|
     pending
 end
