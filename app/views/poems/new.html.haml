@@ -65,7 +65,13 @@
               %p *Download a blank student release form on the Secure Login page – section 3 <a href="http://www.californiapoets.org/secure-login" target="_blank">here</a>.
               = file_field :poem, :release, :id => "release_button", :err => 'Release Form'
           %br
+          
+          Having trouble? Click
+          %a{:href => "http://www.californiapoets.org/contact-us", :target => "_blank"} here 
+          to contact us for further assistance.
       -#= button_tag 'Add another student', :id => "addStudent", :type=>"button"
     %br
     %footer.footer
       = submit_tag 'Submit the poem', :id => "button", :class=>"button"
+      
+
