@@ -1,32 +1,23 @@
 **California Poets in Schools**
 169 Fall 2016
 
-*CodeClimate Badge legacy:*
-[![Code Climate](https://codeclimate.com/github/linanc/CApoets/badges/gpa.svg)](https://codeclimate.com/github/linanc/CApoets)
+*CodeClimate Badge*
+[![Code Climate](https://codeclimate.com/github/jazhao1/CApoets/badges/gpa.svg)](https://codeclimate.com/github/jazhao1/CApoets)
 
-*CodeClimate Badge Sum2017:*
-![Code Climate](https://codeclimate.com/github/rails/rails/badges/gpa.svg)](https://codeclimate.com/github/rails/rails)
-
-*Travis CI Badge legacy:*
-[![Build Status](https://travis-ci.org/linanc/CApoets.svg?branch=master)](https://travis-ci.org/linanc/CApoets)
-
-*Travis CI Badge Sum2017:*
-[![Build Status](https://travis-ci.org/jazhao1/CApoets.svg?branch=master](https://travis-ci.org/jazhao1/CApoets)
+*Travis CI Badge*
+[![Build Status](https://travis-ci.org/jazhao1/CApoets.svg?branch=master)](https://travis-ci.org/jazhao1/CApoets)
 
 
-*Test Coverage Badge legacy*
-[![Test Coverage](https://codeclimate.com/github/linanc/CApoets/badges/coverage.svg)](https://codeclimate.com/github/linanc/CApoets/coverage)
-
-*Test Coverage Badge Sum2017*
-[![Test Coverage](https://codeclimate.com/github/rails/rails/badges/coverage.svg)](https://codeclimate.com/github/rails/rails/coverage)
+*Test Coverage Badge*
+[![Test Coverage](https://codeclimate.com/github/jazhao1/CApoets/badges/coverage.svg)](https://codeclimate.com/github/jazhao1/CApoets/coverage)
 
 *Heroku Link*
 http://capoets.herokuapp.com
 
 *Pivotal Tracker Link*
-https://www.pivotaltracker.com/n/projects/1886675
+https://www.pivotaltracker.com/n/projects/2071017
 
-
+https://travis-ci.org/jazhao1/CApoets.svg?branch=master
 This project will extend functionality for an existing website (CaliforniaPoets.org),
 a non-profit organization for poet teachers and students. 
 
