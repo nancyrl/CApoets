@@ -49,5 +49,11 @@ And I attach "poem_button" with "features/t.txt"
 And I attach "release_button" with "features/t.txt"
 When I press "Submit the poem"
 Then I should see "Poem was successfully submitted."
+And  "tina@cpits.org" should receive an email
 When I press "Submit another poem"
 Then I should be on new poem
+
+Scenario: Tina receives an email with correct contents
+When "tina@cpits.org" opens the email
+Then they should see the email delivered from "CApoets Submission <noreply@cpits.org>"
+And they should see "A New Poem Has Been Submitted" in the email subject
