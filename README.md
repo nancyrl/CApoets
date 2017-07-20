@@ -14,10 +14,13 @@
 *Heroku Link*
 http://capoets.herokuapp.com
 
+*Heroku Development Link*
+http://afternoon-plains-14539.herokuapp.com/
+
 *Pivotal Tracker Link*
 https://www.pivotaltracker.com/n/projects/2071017
 
-https://travis-ci.org/jazhao1/CApoets.svg?branch=master
+
 This project will extend functionality for an existing website (CaliforniaPoets.org),
 a non-profit organization for poet teachers and students. 
 
