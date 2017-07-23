@@ -24,6 +24,8 @@ module NavigationHelpers
       new_user_registration_path
     when /^the home page$/
       root_path
+    when /^gallery$/
+      root_path
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
