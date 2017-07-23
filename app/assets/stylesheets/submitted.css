@@ -50,7 +50,7 @@ body {
   width: 300px;
   margin: 50px auto;
   text-align: center;
-  transition: box-shadow .3s ease-in-out
+  transition: 2s ease-in-out
 }
 .info h1 {
   /*margin: 0 0 15px;*/
