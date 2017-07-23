@@ -35,6 +35,7 @@ class PoemsController < ApplicationController
     def create
         @poem = Poem.new(poem_params)
         if @poem.save
+            Notifier.notify(@poem.teacher_name).deliver
             redirect_to submitted_path
         else
             flash[:warning] = "Please fill in Missing Fields."
