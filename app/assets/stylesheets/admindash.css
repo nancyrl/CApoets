@@ -1,7 +1,7 @@
 body {
-  background: #FBFBFB;
+  background: #fff;
   font-size: 12px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,6 +11,7 @@ body {
 h1 {
 	padding: 20px;
 	text-align: center;
+  color: #3d9be9;
 }
 
 .container{
@@ -42,12 +43,15 @@ ul.tabs li a {
 }
 
 ul.tabs li a:hover {
-    background-color: #ddd;
+    background-color: #c7e2f9;
 }
 
 /* Create an active/current tablink class */
 ul.tabs li a:focus, .active {
-    background-color: #ccc;
+    background-color: #3d9be9;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .tab-content{

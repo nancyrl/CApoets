@@ -13,6 +13,7 @@ end
 group :test do
   gem "simplecov"
   gem "codeclimate-test-reporter", "~> 1.0.0"
+  gem 'email_spec'
 end
 
 group :production do
