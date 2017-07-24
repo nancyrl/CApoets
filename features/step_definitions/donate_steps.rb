@@ -20,7 +20,6 @@ Given /I can press the "(.*)" button/ do |button|
         # page.should have_css("img[src*= 'donate.png']")
     # find('.donate_img').click
     
-    
     # click_link('', :id=> "Donate_image")
     # /assets/donate-bc796926f48918f55d81115de505fbf932aa9b17a13766a23dcbcb828ef9887e.png
 end
