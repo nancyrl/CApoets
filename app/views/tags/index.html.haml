@@ -1,0 +1,75 @@
+= stylesheet_link_tag "admindash"
+= javascript_include_tag 'admindash'
+
+.rightbutton= link_to 'Log Out', destroy_user_session_path, :method=>'delete'
+
+%h1 List of All Submitted Tags in Database
+
+.container
+	.switch-button
+		%div#options
+			%div 
+				=link_to "Poems", authenticated_root_path
+			%div 
+				=link_to "Tags", view_tags_path
+	
+	.tabs-container
+		%ul.tabs
+			%li
+				=link_to "Pending Approval", "javascript:openTab(event, 'tab-1')", :id => "current", :class => "tab-link"
+			%li 
+				=link_to "All Tags", "javascript:openTab(event, 'tab-2')", :class => "tab-link"
+			%li 
+				=link_to "Approved Tags", "javascript:openTab(event, 'tab-3')", :class => "tab-link"
+			%li 
+				=link_to "Rejected Tags", "javascript:openTab(event, 'tab-4')", :class => "tab-link"
+			
+		#tab-1.tab-content
+			%table#poems
+				%thead
+					%tr
+						%th Tag
+						%th Actions
+				%tbody
+					- @tags.each do |tag| 
+						- if tag.status == "Pending"
+							%tr
+								%td= tag.category
+								%td= button_to( "Approve", approve_poem_path(tag.id))
+								%td= button_to( "Reject", reject_poem_path(tag.id))
+		#tab-2.tab-content
+			%table#poems
+				%thead
+					%tr
+						%th Tag
+						%th Status
+				%tbody
+					- @tags.each do |tag| 
+						%tr
+							%td= tag.category
+							%td= tag.status
+		#tab-3.tab-content
+			%table#poems
+				%thead
+					%tr
+						%th Tag
+						%th Actions
+				%tbody
+					- @tags.each do |tag|
+						- if tag.status == "Approved"
+							%tr
+								%td= tag.category
+								%td= button_to( "Reject", reject_poem_path(tag.id))
+		#tab-4.tab-content
+			%table#poems
+				%thead
+					%tr
+						%th Tag
+				%tbody
+					- @tags.each do |tag|
+						- if tag.status == "Rejected"
+							%tr
+								%td= tag.category
+					
+%script
+	document.getElementById("current").click();

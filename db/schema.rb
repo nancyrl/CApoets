@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20170717005229) do
 
-  create_table "create_tags", force: :cascade do |t|
+  create_table "tags", force: :cascade do |t|
     t.string   "category"
     t.string   "status"
     t.integer  "number_of_hits"

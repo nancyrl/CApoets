@@ -27,3 +27,15 @@
 end
 
 
+5.times do |i|
+    tag = Tag.new({
+        # add approval column to tag table
+        category: "Category ##{i}",
+        status: "Pending",
+        number_of_hits: "Number_of_hits ##{i}",
+        description: "Description ##{i}",
+        created_at: "Created_at ##{i}",
+        updated_at: "Updated_at ##{i}"
+        })
+    tag.save!(validate: false)
+end
