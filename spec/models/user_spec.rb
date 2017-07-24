@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Poem, type: :model do
     before(:each) do
-        @poem = Poem.create(title: "My first post", teacher_name: "Nancy Li", county: "Alameda", email: "nli@berkeley.edu", student_name: "Jennifer Yip", school: "CAL", grade: "K", student_teacher_name: "Ms. Carol", title: "ABC", attachment: "{ File.open(File.join(Rails.root, '/spec/a.pdf')) }", poem: "efg", release: "{ File.open(File.join(Rails.root, '/spec/b.pdf')) }" )
+        @poem = Poem.create(teacher_name: "Nancy Li", county: "Alameda", email: "nli@berkeley.edu", student_name: "Jennifer Yip", school: "CAL", grade: "K", student_teacher_name: "Ms. Carol", title: "ABC", attachment: "{ File.open(File.join(Rails.root, '/spec/a.pdf')) }", poem: "efg", release: "{ File.open(File.join(Rails.root, '/spec/b.pdf')) }" )
     end
       
     describe "#new" do
