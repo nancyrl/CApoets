@@ -9,6 +9,13 @@ Rails.application.routes.draw do
     end
   end 
   
+  resources :tags, except: [:index] do
+    authenticated :user do
+      post 'approve'
+      post 'reject'
+    end
+  end 
+  
   get '/home/', to: 'poems#home'
   get '/form/', to: 'poems#new'
   get '/submitted/', to: 'poems#submitted'
@@ -17,6 +24,9 @@ Rails.application.routes.draw do
   devise_for :users
   authenticated :user do 
     root 'poems#index', as: :authenticated_root
+    get '/index/', to: 'tags#index', as: :view_tags
+    # post 'approve_tag', to: 'tags#approve', as: :approve_tag
+    # post 'reject_tag', to: 'tags#reject', as: :reject_tag
   end
   
   unauthenticated :user do

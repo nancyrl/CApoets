@@ -13,6 +13,7 @@ end
 group :test do
   gem "simplecov"
   gem "codeclimate-test-reporter", "~> 1.0.0"
+  gem 'email_spec'
 end
 
 group :production do
@@ -59,6 +60,10 @@ gem 'simple_form'
 gem 'will_paginate', '~> 3.1.0'
 gem 'devise'
 # gem 'tinymce-rails'
+<<<<<<< HEAD
 gem "factory_girl_rails", "~> 4.0"
 
 gem "selenium-webdriver"
+=======
+gem "factory_girl_rails", "~> 4.0"
+>>>>>>> 3e3899126722d756cfde93da09b60e4d2b786f73
