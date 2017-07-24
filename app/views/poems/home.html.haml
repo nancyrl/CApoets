@@ -1,19 +1,26 @@
 !!! 5
 %html
+  
   %head
     %title California Poets Submitted Poems
     = stylesheet_link_tag 'home'
     = javascript_include_tag 'home'
     = csrf_meta_tags
-    
-  %body
-    %h1.title Fresh poems from our students across California
-    =image_tag "https://static.wixstatic.com/media/a0cfee_3825840911504adfac05ff6e22bf7b6c.jpg/v1/fill/w_198,h_134,al_c,q_80,usm_0.66_1.00_0.01/a0cfee_3825840911504adfac05ff6e22bf7b6c.webp",
-                :id => "CPITS_image"
-    .redirect_link 
-      = link_to 'Back to California Poets', 'http://www.californiapoets.org/'
-    #main
+  // , margin: "10" align: "left"
       
+
+  %body
+   
+    = link_to image_tag("https://static.wixstatic.com/media/a0cfee_3825840911504adfac05ff6e22bf7b6c.jpg/v1/fill/w_198,h_134,al_c,q_80,usm_0.66_1.00_0.01/a0cfee_3825840911504adfac05ff6e22bf7b6c.webp", 
+    width: "280px", height: "189px", align: "left"),
+    'http://www.californiapoets.org/', :id => "CPITS_image"
+
+    .donate_img
+      = link_to image_tag("donate.png", align: "right"), "http://www.californiapoets.org/for-donors", :id => "Donate_image"
+    
+    %h1.title Fresh poems from our students across California
+    #main
+
   %poems_container{:id => "poems_container"}
     - @poems.each do |poem|
       .poems_box{:id => "poem#{poem.id}"}
@@ -24,6 +31,5 @@
   %span.ending_line
     Help us continue our program one line can change a life
   = will_paginate @poems, inner_window: 2, outer_window: 2
-  %span.donate
-    = link_to 'Donate', 'http://www.californiapoets.org/for-donors'
-
+  .redirect_link 
+    = link_to 'Back to California Poets', 'http://www.californiapoets.org/'
