@@ -27,3 +27,5 @@ a non-profit organization for poet teachers and students.
 The customer wishes to have an easy to use submission form so that their poet teachers can upload their students' poems, images, and release forms. 
 The customer would also like a dashboard where the administrators can filter through
 submitted poems. Accepted poems are published for the public to view. 
+
+<!--rails s -b $IP -p $PORT-->
