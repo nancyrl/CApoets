@@ -1,9 +1,23 @@
-#main {
+#new_user {
     text-align: center;
-    width: 500px;
-    height: 280px;
-    margin-left: auto;
-    border-style: outset;
-    margin-right: auto;
-    background: #eaf7ff;
+    margin: 0 auto;
+    width: 50% !important;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 3%;
+}
+
+a {
+	text-align: center;
+	display: block;
+}
+
+h2 {
+	text-align: center;
+    margin: 0 auto;
+    margin: 2% 0 5% 0;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { 
+     background-color: #ffffff !important;
+     -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }

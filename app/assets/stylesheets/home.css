@@ -41,6 +41,7 @@ h1.title {
   width: 158px;
   height: 107px;
   object-fit: cover;
+  display: inline;
 }
 
 .redirect_link {
