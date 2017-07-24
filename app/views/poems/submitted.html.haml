@@ -1,9 +1,10 @@
-= stylesheet_link_tag "submitpoemform"
+= stylesheet_link_tag "submitted"
 
 .container
   .info
-    %h1 Poem was successfully submitted.
+    %h1 Poem was successfully submitted!
     %span
     %br
     %footer.footer
       = button_to 'Submit another poem', { action: "new" },  :method => :get, :id => "submit_another_button", :class=>"button"
+      = button_to 'Return to Gallery', { action: "home" },  :method => :get, :id => "return_to_gallery", :class=>"button"
