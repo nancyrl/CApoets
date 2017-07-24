@@ -33,5 +33,31 @@
           = @poem.county
         %ol
           = link_to "Download", @poem.attachment_url
-     
-
+.wrapper
+  %aside.aside.aside-1
+    %h2 
+      = @poem.title
+    %h3 
+      = @poem.student_name
+      , Grade
+      = @poem.grade
+    %li
+      Poet Teacher: 
+      = @poem.teacher_name
+    %li
+      Teacher: 
+      = @poem.student_teacher_name
+    %li
+      School: 
+      = @poem.school
+    %li
+      County: 
+      = @poem.county
+    %li
+      = link_to "Download", @poem.attachment_url
+  %aside.aside.aside-2
+    
+   
+.wrapper 
+  %poemtext
+    = simple_format(@poem.poem)
