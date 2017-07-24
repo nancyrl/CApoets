@@ -6,6 +6,8 @@
     %span
   = form_tag poems_path, :class => "modal", :multipart => true do
     %header.header
+      = link_to image_tag("https://static.wixstatic.com/media/a0cfee_3825840911504adfac05ff6e22bf7b6c.jpg/v1/fill/w_198,h_134,al_c,q_80,usm_0.66_1.00_0.01/a0cfee_3825840911504adfac05ff6e22bf7b6c.webp", 
+      width: "150px", height: "90px", align: "left"), 'http://www.californiapoets.org/', :id => "CPITS_image"   
       %h1 California Poets in the Schools
     .content
       .form
@@ -65,7 +67,13 @@
               %p *Download a blank student release form on the Secure Login page – section 3 <a href="http://www.californiapoets.org/secure-login" target="_blank">here</a>.
               = file_field :poem, :release, :id => "release_button", :err => 'Release Form'
           %br
+          
+          Having trouble? Click
+          %a{:href => "http://www.californiapoets.org/contact-us", :target => "_blank"} here 
+          to contact us for further assistance.
       -#= button_tag 'Add another student', :id => "addStudent", :type=>"button"
     %br
     %footer.footer
       = submit_tag 'Submit the poem', :id => "button", :class=>"button"
+      
+
