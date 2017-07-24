@@ -225,6 +225,7 @@ Then /^save and open all raw emails$/ do
   EmailSpec::EmailViewer::save_and_open_all_raw_emails
 end
 
-When /^poet teacher "(.*)" submits an email$/ do |poet_teacher|
-  pending
+When /^poet teacher "(.*)" submits a poem$/ do |poet_teacher|
+  @teacher = poet_teacher
+  Notifier.notify(@teacher).deliver_now
 end

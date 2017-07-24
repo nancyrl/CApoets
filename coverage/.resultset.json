@@ -1,50 +1,32 @@
 {
-  "RSpec": {
-    "coverage": {
-      "/home/ubuntu/workspace/CApoets/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/CApoets/app/models/item_wrapper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/CApoets/app/models/poem.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ]
-    },
-    "timestamp": 1499130500
-  },
   "Cucumber Features": {
     "coverage": {
-      "/Users/evie/Desktop/School/cs169/CApoets/app/models/user.rb": [
+      "/home/ubuntu/workspace/app/models/user.rb": [
         1,
         null,
         null,
         1,
         null,
         null
+      ],
+      "/home/ubuntu/workspace/app/mailers/notifier.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/app/mailers/application_mailer.rb": [
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1500871470
+    "timestamp": 1500887497
   }
 }
