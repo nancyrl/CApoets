@@ -1,59 +1,7 @@
 {
-  "RSpec": {
-    "coverage": {
-      "/home/ubuntu/workspace/cs169-proj/CApoets/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/cs169-proj/CApoets/app/models/item_wrapper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/cs169-proj/CApoets/app/models/poem.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ]
-    },
-<<<<<<< HEAD
-    "timestamp": 1499060706
-  },
   "Cucumber Features": {
     "coverage": {
     },
-    "timestamp": 1499669018
-=======
-    "timestamp": 1499130500
-  },
-  "Cucumber Features": {
-    "coverage": {
-      "/home/ubuntu/workspace/cs169-proj/CApoets/app/models/user.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        null
-      ]
-    },
-    "timestamp": 1500275242
->>>>>>> master
+    "timestamp": 1500276072
   }
 }

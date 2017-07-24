@@ -12,7 +12,6 @@ end
 World(WithinHelpers)
 
 Given /I can press the "(.*)" button/ do |button|
-    Capybara.current_driver = :selenium
     if button == "donate"
         visit "http://www.californiapoets.org/for-donors"
     end
