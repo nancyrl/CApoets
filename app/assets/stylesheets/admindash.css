@@ -82,12 +82,16 @@ th, td {
   height: 70px;
 }
 
+.heading-button-container {
+  position: static;
+}
+
 .switch-button {
-  position: absolute;
+  /*position: relative;*/
   width: 100%;
   /*height: 10%;*/
-  top: 13%;
-  padding: 10px 0 10px 0;
+  top: 25%;
+  /*padding: 10px 0 10px 0;*/
 }
 
 /*.options {*/
