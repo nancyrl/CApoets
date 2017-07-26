@@ -9,7 +9,7 @@ body {
 }
 
 
-textarea .form-control{
+textarea.form-control{
   height: 150px;
   width: 540px;
   margin:0 auto;
@@ -35,13 +35,14 @@ img {
   border-radius: 10px;
   color: #313A3D;
 }
-
 h1 {
   text-align: center;
+  
   font-size: 50px;
   font-family: Georgia, serif
+  
+  
 }
-
 .newpoem_form {
   background: #ffffff;
   -webkit-border-radius: 3px;
@@ -53,7 +54,6 @@ h1 {
   overflow: hidden;
   border-radius: 10px;
 }
-
 .newpoem_form .form .form-row {
   display: -webkit-box;
   display: -moz-box;
@@ -69,21 +69,17 @@ h1 {
   flex-direction: row;
   margin: 0 0 30px;
 }
-
 .newpoem_form .form .form-row:last-child {
   margin: 0;
 }
-
 .newpoem_form .form .form-row:last-child .input-group {
   width: 75%;
   margin: 0 15px 0 0;
 }
-
 .newpoem_form .form .form-row:last-child .input-group:last-child {
   width: 25%;
   margin: 0 0 0 15px;
 }
-
 .newpoem_form .form .input-group {
   width: 100%;
 }
@@ -91,12 +87,12 @@ h1 {
   display: block;
   width: 100%;
   margin: 0 0 10px;
+  /*color: black;*/
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
 .newpoem_form .form input {
   outline: none;
   display: block;
@@ -147,8 +143,11 @@ h1 {
   line-height: 60px;
   padding:3px 30px;
 } 
-
 .newpoem_form .header h1 {
+  /*margin: 0px;*/
+  /*color: black;*/
+  /*font-size: 14px;*/
+  /*font-weight: 700;*/
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -164,7 +163,6 @@ form label.header {
 .modal .content {
   padding: 30px;
 }
-
 .button:hover {
   background-color: #FA865F !important;
 }
@@ -190,7 +188,6 @@ form label.header {
   margin: 50px auto;
   text-align: center;
 }
-
 .info h1 {
   margin: 0 0 15px;
   padding: 0;
@@ -199,13 +196,12 @@ form label.header {
   font-weight: 400;
   font-style: italic;
   color: #333;
+  
 }
-
 .info span {
   color: #666;
   font-size: 12px;
 }
-
 .info span a {
   color: #000000;
   text-decoration: none;
@@ -224,8 +220,14 @@ lesshat-selector {
   justify-content: space-around;
   font-style: italic;
 }
+
+/*#CPITS_image {*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*}*/
   
 @-webkit-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 @-moz-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 @-o-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 @keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
+
