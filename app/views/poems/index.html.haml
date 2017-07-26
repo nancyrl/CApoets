@@ -3,24 +3,23 @@
 
 .rightbutton= link_to 'Log Out', destroy_user_session_path, :method=>'delete'
 
-%h1 List of All Submitted Poems in Database
-// .switch-button
-// 	%div#options
-// 		%div Hello
-// 		%div Bye
-	
-// 	%table
-// 		%tr#options
-// 			%th#caption Poems
-// 			%th#caption Tags
-
-.container
+.heading-button-container
+	%h1 List of All Submitted Poems in Database
 	.switch-button
 		%div#options
 			%div 
 				=link_to "Poems", authenticated_root_path
 			%div
 				=link_to "Tags", view_tags_path
+
+.container
+	// %h1 List of All Submitted Poems in Database
+	// .switch-button
+	// 	%div#options
+	// 		%div 
+	// 			=link_to "Poems", authenticated_root_path
+	// 		%div
+	// 			=link_to "Tags", view_tags_path
 	
 	// 	%table
 	// 		%tr#options
