@@ -47,4 +47,4 @@ class PoemsController < ApplicationController
         @poems = Poem.where("status = 'Approved'").order(:created_at).reverse_order.paginate(page: params[:page], per_page: 9)
     end
     
-end 
+end  
