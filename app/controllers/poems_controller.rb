@@ -40,7 +40,7 @@ class PoemsController < ApplicationController
         else
             flash.now[:warning] = "Please fill in Missing Fields."
             render new_poem_path
-        end 
+        end  
     end
     
     def home
