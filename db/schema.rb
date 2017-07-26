@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(version: 20170717005229) do
 
+  create_table "create_tags", force: :cascade do |t|
+    t.string   "category"
+    t.string   "status"
+    t.integer  "number_of_hits"
+    t.string   "description"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
   create_table "item_wrappers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -34,15 +43,6 @@ ActiveRecord::Schema.define(version: 20170717005229) do
     t.string   "status",               default: "Pending"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "tags", force: :cascade do |t|
-    t.string   "category"
-    t.string   "status"
-    t.integer  "number_of_hits"
-    t.string   "description"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|

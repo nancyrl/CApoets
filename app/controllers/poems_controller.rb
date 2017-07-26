@@ -38,7 +38,7 @@ class PoemsController < ApplicationController
             Notifier.notify(@poem.teacher_name).deliver_later
             redirect_to submitted_path
         else
-            flash[:warning] = "Please fill in Missing Fields."
+            flash.now[:warning] = "Please fill in Missing Fields."
             render new_poem_path
         end
     end
