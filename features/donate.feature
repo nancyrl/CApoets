@@ -6,13 +6,5 @@ Feature: Reader wants to donate to CApoets
 
     
 Scenario: I want to donate
-Given I am a reader on the "home" page
-Then I should see a the "donate" button
-
-Scenario: I want to donate
-Given I am a reader on the "gallery" page
-Then I should see a the "donate" button
-
-Scenario: I want to donate
-Given I am a reader on the "detailed" page
-Then I should see a the "donate" button
+Given I can press the "donate" button
+Then I should see the "donate" page
