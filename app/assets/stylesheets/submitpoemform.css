@@ -43,7 +43,7 @@ h1 {
   
   
 }
-.modal {
+.newpoem_form {
   background: #ffffff;
   -webkit-border-radius: 3px;
   -webkit-background-clip: padding-box;
@@ -54,7 +54,7 @@ h1 {
   overflow: hidden;
   border-radius: 10px;
 }
-.modal .form .form-row {
+.newpoem_form .form .form-row {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -69,21 +69,21 @@ h1 {
   flex-direction: row;
   margin: 0 0 30px;
 }
-.modal .form .form-row:last-child {
+.newpoem_form .form .form-row:last-child {
   margin: 0;
 }
-.modal .form .form-row:last-child .input-group {
+.newpoem_form .form .form-row:last-child .input-group {
   width: 75%;
   margin: 0 15px 0 0;
 }
-.modal .form .form-row:last-child .input-group:last-child {
+.newpoem_form .form .form-row:last-child .input-group:last-child {
   width: 25%;
   margin: 0 0 0 15px;
 }
-.modal .form .input-group {
+.newpoem_form .form .input-group {
   width: 100%;
 }
-.modal .form label {
+.newpoem_form .form label {
   display: block;
   width: 100%;
   margin: 0 0 10px;
@@ -93,7 +93,7 @@ h1 {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.modal .form input {
+.newpoem_form .form input {
   outline: none;
   display: block;
   background: rgba(0, 0, 0, 0.1);
@@ -115,7 +115,7 @@ h1 {
   box-sizing: border-box;
 }
 
-.modal .form select{
+.newpoem_form .form select{
   outline: none;
   display: block;
   background: rgba(0, 0, 0, 0.1);
@@ -137,13 +137,13 @@ h1 {
   box-sizing: border-box;
 }
 
-.modal .header {
+.newpoem_form .header {
   background: #fcd307;
   text-align: center;
   line-height: 60px;
   padding:3px 30px;
 } 
-.modal .header h1 {
+.newpoem_form .header h1 {
   /*margin: 0px;*/
   /*color: black;*/
   /*font-size: 14px;*/
