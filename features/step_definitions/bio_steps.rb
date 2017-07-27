@@ -7,7 +7,7 @@ Then /I press the "(.*)" button/ do |button|
 end
 
  Then /I should see link to profile: "(.*)"/ do |name|
-    pending
+    pending 
 end
 
 Then  /I should be redirected to Poet-Teacher profile: "(.*)"/ do |name|
