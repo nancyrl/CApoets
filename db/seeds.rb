@@ -8,7 +8,8 @@
 
 5.times do |i|
     poem = Poem.new({
-        teacher_name: "Teacher_Name ##{i}",
+        #teacher_name: "Teacher_Name ##{i}",
+        teacher_name: "Ron Alexander",
         county: "County ##{i}",
         email: "Email ##{i}",
         student_name: "Student_Name ##{i}",
@@ -25,7 +26,6 @@
         })
     poem.save!(validate: false)
 end
-
 
 5.times do |i|
     tag = Tag.new({

@@ -58,7 +58,7 @@
 					- @poems.each do |poem| 
 						- if poem.status == "Pending"
 							%tr
-								%td= poem.teacher_name 
+								%td= link_to poem.teacher_name, teacher_profile_poem_path(poem.id)
 								%td= poem.county
 								%td= poem.email
 								%td= poem.student_name
