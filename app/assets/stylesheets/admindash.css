@@ -107,14 +107,6 @@ th, td {
   margin-top: 2%;
 }
 
-.logout:hover {
-  background-color: #c7e2f9 !important;
-}
-
 .poem-tag {
   color: #039be5;
-}
-
-.poem-tag:hover {
-  background-color: #c7e2f9 !important;
 }
