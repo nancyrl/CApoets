@@ -3,17 +3,14 @@ html, body {
   padding: 0;
   background: White;
   color: DarkSlateGrey;
-  font-family: Tahoma, Verdana, sans-serif;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   font-size: 10pt;
   max-width: 100%;
-  /*overflow-x: hidden;*/
- 
 }
 
 div#main {
   margin: 0;
   padding: 0 20px 20px;
-  /*position: relative;*/
 }
 
 h1 {
@@ -66,9 +63,7 @@ h1.title {
   -webkit-flex-direction: row;
   flex-direction: row;
   -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  
-  
+  flex-wrap: wrap;  
 }
 
 .poems_box:hover {
@@ -148,12 +143,10 @@ h1.title {
 }
 
 .donate_img {
-  
   align: right;
   padding: 1%;
-  
-  
 }
+
 .pagination {
   margin-bottom: -25px;
   margin-left: 23%;

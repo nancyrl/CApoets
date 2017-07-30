@@ -1,16 +1,16 @@
 = stylesheet_link_tag "admindash"
 = javascript_include_tag 'admindash'
 
-.rightbutton= link_to 'Log Out', destroy_user_session_path, :method=>'delete'
+.rightbutton= link_to 'Log Out', destroy_user_session_path, :method=>'delete', :class=>"btn white logout"
 
 .heading-button-container
 	%h1 List of All Submitted Poems in Database
 	.switch-button
 		%div#options
 			%div 
-				=link_to "Poems", authenticated_root_path
+				=link_to "Poems", authenticated_root_path, :class=>"btn white poem-tag"
 			%div
-				=link_to "Tags", view_tags_path
+				=link_to "Tags", view_tags_path, :class=>"btn white poem-tag"
 
 .container
 	// %h1 List of All Submitted Poems in Database
