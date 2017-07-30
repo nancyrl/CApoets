@@ -69,7 +69,7 @@ h1.title {
   flex-direction: row;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 220px, auto, 100px, auto;
+  margin: 220px auto 100px auto;
 
 }
 
