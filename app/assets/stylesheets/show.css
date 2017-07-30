@@ -6,14 +6,11 @@
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   min-width: 800px;
-<<<<<<< HEAD
-  
 }
+
 .logo {
   padding: 10px;
   float: left;
-=======
->>>>>>> 76c0117221068b03e938857c0fc046aedaf219fd
 }
 
 .container {

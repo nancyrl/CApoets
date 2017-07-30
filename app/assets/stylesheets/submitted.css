@@ -71,10 +71,6 @@ lesshat-selector {
   font-style: italic;
 }
 
-<<<<<<< HEAD
-  
-=======
->>>>>>> 76c0117221068b03e938857c0fc046aedaf219fd
 @-webkit-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 @-moz-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 @-o-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
