@@ -16,7 +16,7 @@ body {
   box-shadow: 2px 2px 10px #888888;
   border-radius: 10px;
   color: #313A3D;
-  /*color: red;*/
+  margin-top: 100px;
   background-color: white;
   padding: 10px;
   
@@ -73,10 +73,6 @@ lesshat-selector {
   font-style: italic;
 }
 
-/*#CPITS_image {*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*}*/
   
 @-webkit-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 @-moz-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
