@@ -23,20 +23,21 @@ class Poem < ActiveRecord::Base
         require 'nokogiri'
         
         agent = Mechanize.new
-        page = agent.get('https://c3cmr117.caspio.com/dp.asp?AppKey=81ec40002ba02c780e474240af87') 
+        if page = agent.get('https://c3cmr117.caspio.com/dp.asp?AppKey=81ec40002ba02c780e474240af87') 
         
-        form = page.form_with(:id => 'caspioform')
+            form = page.form_with(:id => 'caspioform')
         
-        names = self.teacher_name.split(" ")
-        first_name = names[0]
-        last_name = names[1]
-        form["Value1_1"] = last_name
-        form["Value2_1"] = first_name
-        page = agent.submit(form)
+            names = self.teacher_name.split(" ")
+            first_name = names[0]
+            last_name = names[1]
+            form["Value1_1"] = last_name
+            form["Value2_1"] = first_name
+            page = agent.submit(form)
         
-        if link = page.link_with(:text => "View Details")
-            page2 = link.click
-            return page2.uri.to_s
+            if link = page.link_with(:text => "View Details")
+                page2 = link.click
+                return page2.uri.to_s
+            end
         end
     end
 end
