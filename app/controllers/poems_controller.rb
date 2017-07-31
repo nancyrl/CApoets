@@ -38,13 +38,23 @@ class PoemsController < ApplicationController
             Notifier.notify(@poem.teacher_name).deliver_later
             redirect_to submitted_path
         else
-            flash[:warning] = "Please fill in Missing Fields."
+            flash.now[:warning] = "Please fill in Missing Fields."
             render new_poem_path
-        end
+        end   
     end
     
     def home
         @poems = Poem.where("status = 'Approved'").order(:created_at).reverse_order.paginate(page: params[:page], per_page: 9)
     end
     
-end
+    def teacher_profile
+        @poem = Poem.find(params[:id])
+        link = @poem.teacher_profile_link
+        if not link.nil?
+            redirect_to link
+        else
+            flash[:notice] = "Teacher does not exist"
+            redirect_to authenticated_root_url
+        end
+    end
+end  

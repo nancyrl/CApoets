@@ -1,7 +1,9 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/workspace/app/models/user.rb": [
+
+      "/home/ubuntu/workspace/master/app/models/user.rb": [
+
         1,
         null,
         null,
@@ -9,24 +11,144 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/mailers/notifier.rb": [
+      "/home/ubuntu/workspace/master/app/models/poem.rb": [
+        1,
+        1,
         1,
         1,
         null,
         1,
-        2,
-        2,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/master/app/controllers/application_controller.rb": [
+        1,
+
+        null,
+        null,
+        1,
+
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        21,
+        21,
+        21,
         null,
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/mailers/application_mailer.rb": [
+      "/home/ubuntu/workspace/master/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/master/app/helpers/tags_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/master/app/controllers/poems_controller.rb": [
+        1,
+
+        1,
+        1,
+
+        10,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
         1,
         1,
         1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1500887497
+    "timestamp": 1501475546
+
+  
   }
 }
