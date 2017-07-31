@@ -1,23 +1,26 @@
 = stylesheet_link_tag "submitpoemform"
 
+
 .container
   .info
-    %h1 Submit a poem
+   
     %span
-  = form_tag poems_path, :class => "modal", :multipart => true do
+  = form_tag poems_path, :class => "newpoem_form", :multipart => true do
     %header.header
-      %h1 California Poets in the Schools
+      = link_to image_tag("https://static.wixstatic.com/media/a0cfee_3825840911504adfac05ff6e22bf7b6c.jpg/v1/fill/w_198,h_134,al_c,q_80,usm_0.66_1.00_0.01/a0cfee_3825840911504adfac05ff6e22bf7b6c.webp",
+      ), '/', :id => "CPITS_image"   
+      %h1 Submit a poem
     .content
       .form
         %h2 Poet-Teacher Information
         .form-row
           .input-group
             = label :poem, :teacher_name, 'Poet Teacher Name'
-            = text_field :poem, :teacher_name, :class=> "form-control", :id=> "poem_teacher_name", :placeholder => 'ex: Jennifer Yip', :err => 'Poet Teacher Name'
+            = text_field :poem, :teacher_name, :class=> "form-control", :id=> "poem_teacher_name", :placeholder => 'ex: John Smith', :err => 'Poet Teacher Name'
         .form-row
           .input-group
             = label :poem, :email, 'Email'
-            = text_field :poem, :email, :class=> "form-control", :id=> "poem_email", :placeholder => 'ex: jenniferyip@berkeley.edu', :err => "Email"           
+            = text_field :poem, :email, :class=> "form-control", :id=> "poem_email", :placeholder => 'ex: jSmith@gmail.com', :err => "Email"           
         %h2 Student Information
         
         %entry1.student_instance
@@ -32,15 +35,15 @@
           .form-row
             .input-group
               = label :poem, :student_teacher_name, 'Teacher Name'
-              = text_field :poem, 'student_teacher_name', :class => "entry_box", :id => "poem_student_teacher_name", :type => 'text', :placeholder => 'ex: Nancy Li', :err => "Teacher Name"
+              = text_field :poem, 'student_teacher_name', :class => "entry_box", :id => "poem_student_teacher_name", :type => 'text', :placeholder => 'ex: Nancy Freeman', :err => "Teacher Name"
           
           .form-row
             .input-group
               = label :poem, :school, 'School'
-              = text_field :poem, 'school', :class => "entry_box", :id => "poem_school", :type => 'text', :placeholder => 'ex: Basis Middle School', :err => "School"
+              = text_field :poem, 'school', :class => "entry_box", :id => "poem_school", :type => 'text', :placeholder => 'ex: Berkeley Middle School', :err => "School"
             .input-group
               = label :poem, :county, "County"
-              = select :poem, 'county', [ 'Alameda', 'Alpine', 'Amador', 'Butte', 'Calaveras', 'Colusa' , 'Contra Costa', 'Del Norte', 'El Dorado', 'Fresno', 'Glenn', 'Humboldt', 'Imperial', 'Inyo', 'Kern', 'Kings', 'Lake', 'Lassen', 'Los Angeles', 'Madera', 'Marin', 'Mariposa', 'Mendocino', 'Merced', 'Modoc', 'Mono', 'Monterey', 'Napa', 'Nevada', 'Placer', 'Plumas', 'Riverside', 'Sacramento', 'San Benito', "San Bernardino", 'San Diego', 'San Francisco', 'San Joaquin', 'San Luis Obispo', 'San Mateo', 'Santa Barbara', 'Santa Clara', 'Santa Cruz', 'Shasta', 'Sierra', 'Siskiyou', 'Solano', 'Sonoma', 'Stanislaus', 'Sutter', 'Tehama', 'Trinity', 'Tulare', 'Tuolumne', 'Ventura', 'Yolo', 'Yuba']
+              = select :poem, 'county', [ 'Alameda', 'Alpine', 'Amador', 'Butte', 'Calaveras', 'Colusa' , 'Contra Costa', 'Del Norte', 'El Dorado', 'Fresno', 'Glenn', 'Humboldt', 'Imperial', 'Inyo', 'Kern', 'Kings', 'Lake', 'Lassen', 'Los Angeles', 'Madera', 'Marin', 'Mariposa', 'Mendocino', 'Merced', 'Modoc', 'Mono', 'Monterey', 'Napa', 'Nevada', 'Placer', 'Plumas', 'Riverside', 'Sacramento', 'San Benito', "San Bernardino", 'San Diego', 'San Francisco', 'San Joaquin', 'San Luis Obispo', 'San Mateo', 'Santa Barbara', 'Santa Clara', 'Santa Cruz', 'Shasta', 'Sierra', 'Siskiyou', 'Solano', 'Sonoma', 'Stanislaus', 'Sutter', 'Tehama', 'Trinity', 'Tulare', 'Tuolumne', 'Ventura', 'Yolo', 'Yuba', 'Other']
 
           .form-row
             .input-group
@@ -50,7 +53,7 @@
           .form-row
             .input-group
               = label :poem, :poem, 'Poem'
-              = text_area :poem, 'poem', :class => "entry_box", :id => "poem_entry", :placeholder => 'ex: sample poem', :class=> "form-control"
+              = text_area :poem, 'poem', :class => "entry_box", :id => "poem_entry", :placeholder => 'input poem here', :class=> "form-control"
           .form-row
             .input-group
               = label :poem, :attachment, 'Attach Poem/Images'
@@ -65,7 +68,13 @@
               %p *Download a blank student release form on the Secure Login page – section 3 <a href="http://www.californiapoets.org/secure-login" target="_blank">here</a>.
               = file_field :poem, :release, :id => "release_button", :err => 'Release Form'
           %br
+          
+          Having trouble? Click
+          %a{:href => "http://www.californiapoets.org/contact-us", :target => "_blank"} here 
+          to contact us for further assistance.
       -#= button_tag 'Add another student', :id => "addStudent", :type=>"button"
     %br
     %footer.footer
       = submit_tag 'Submit the poem', :id => "button", :class=>"button"
+      
+

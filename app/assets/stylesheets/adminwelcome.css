@@ -1,5 +1,5 @@
 body {
-  background: #f2f2f2;
+  background: #c7e2f9;
   font-size: 18px;
   font-family: 'Helvetica', sans-serif;
   line-height: 1.5;
@@ -24,11 +24,17 @@ header {
 }
 
 .form {
-    background-color: #3D9BE9;
+    background-color: #3d9be9;
     position: absolute;
     width: 40%;
     height: 40%;
     top: 20%;
     left: 30%;
     text-align: center;
+    transition: box-shadow .3s ease-in-out;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+.btn:hover {
+  background-color: #c7e2f9 !important;
 }
