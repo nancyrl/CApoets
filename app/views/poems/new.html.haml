@@ -49,7 +49,10 @@
             .input-group
               = label :poem, :title, 'Poem Title'
               = text_field :poem, 'title', :class => "entry_box", :id=> "poem_title", :type => 'text', :placeholder => 'ex: The Road Not Taken', :err => 'Poem Title'
-              
+          .form-row
+            .input-group
+              = label :poem, :title, 'Poem Tags'
+              = text_field :poem, 'list_of_tags', :class => "entry_box", :id=> "poem_tags", :type => 'text', :placeholder => 'ex: Love, Seasons, Ode', :err => 'Poem Tags'
           .form-row
             .input-group
               = label :poem, :poem, 'Poem'
