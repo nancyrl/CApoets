@@ -43,15 +43,3 @@ Scenario: I am viewing Poem 3 in detail
   Then I click the box "ApprovedPoem3"
   Then I should see "to"
 
-Scenario: I am viewing Poem 1's Poet_teacher's profile page
-  Then I click the box "ApprovedPoem1"
-  Then I should see link to profile: "Ronald Alexander"
-  When I follow "Ronald Alexander"
-  Then I should be redirected Poet-Teacher profile: "Ronald Alexander"
-
-Scenario: I am viewing Poem 2's Poet_teacher's profile page
-  Then I click the box "ApprovedPoem1"
-  Then I should see link to profile: "Michelle Bitting"
-  When I follow "Michelle Bitting"
-  Then I should be redirected to Poet-Teacher profile: "Michelle Bitting"
-

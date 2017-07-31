@@ -37,6 +37,14 @@ Given(/^there's a poem titled "([^"]*)" with "([^"]*)" status$/) do |title, stat
   @poem = FactoryGirl.create(:poem, title: title, status: status)
 end
 
+Given(/^there's a poem titled "([^"]*)" with "([^"]*)" status and with poet teacher "([^"]*)"$/) do |title, status, poet_teacher|
+  @poem = FactoryGirl.create(:poem, title: title, status: status, :teacher_name => poet_teacher)
+end
+
+When(/^I click "([^"]*)"$/) do |link_name|
+  pending
+end
+
 And(/^I click the poem "([^"]*)" on "([^"]*)"$/) do |title, tab_name|
     case tab_name
     when /^Pending Approval$/

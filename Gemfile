@@ -63,3 +63,5 @@ gem 'devise'
 gem "factory_girl_rails", "~> 4.0"
 
 gem "selenium-webdriver"
+gem 'nokogiri'
+gem 'mechanize', '2.7.5'
