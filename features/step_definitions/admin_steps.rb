@@ -42,7 +42,7 @@ Given(/^there's a poem titled "([^"]*)" with "([^"]*)" status and with poet teac
 end
 
 When(/^I click "([^"]*)"$/) do |link_name|
-  click_link(link_name)
+  pending
 end
 
 And(/^I click the poem "([^"]*)" on "([^"]*)"$/) do |title, tab_name|
