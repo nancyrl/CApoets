@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     member do
       post 'approve'
       post 'reject'
+      get 'teacher_profile'
     end
   end 
   
