@@ -15,6 +15,24 @@
         = @poem.student_name
         , Grade
         = @poem.grade
+    %table#tag-table
+      %thead
+        %tr
+          %th Tags
+          %th Status
+          %th Actions
+      %tbody
+        - @tag_objects.each do |tag| 
+          %tr
+            %td= tag.category
+            %td= tag.status
+            - if tag.status == "Approved"
+              %td= button_to( "Reject", tag_reject_path(tag.id))
+            - if tag.status == "Rejected"
+              %td= button_to( "Revive", tag_approve_path(tag.id))
+            - if tag.status == "Pending"
+              %td= button_to( "Approve", tag_approve_path(tag.id))
+              %td= button_to( "Reject", tag_reject_path(tag.id))
     .content
       .main
         = simple_format(@poem.poem)

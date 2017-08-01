@@ -13,18 +13,6 @@
 				=link_to "Tags", view_tags_path, :class=>"btn white poem-tag"
 
 .container
-	// %h1 List of All Submitted Poems in Database
-	// .switch-button
-	// 	%div#options
-	// 		%div 
-	// 			=link_to "Poems", authenticated_root_path
-	// 		%div
-	// 			=link_to "Tags", view_tags_path
-	
-	// 	%table
-	// 		%tr#options
-	// 			%th#caption Poems
-	// 			%th#caption Tags
 	.tabs-container
 		%ul.tabs
 			%li
@@ -48,6 +36,7 @@
 						%th Grade
 						%th Teacher
 						%th Title of Poem
+						%th Tags
 						%th Status
 						%th Poem/Images
 						%th Release
@@ -66,6 +55,7 @@
 								%td= poem.grade
 								%td= poem.student_teacher_name
 								%td= link_to poem.title, poem_path(poem)
+								%td= poem.list_of_tags
 								%td= poem.status
 								%td= link_to "Download", poem.attachment_url
 								%td= link_to "Download", poem.release_url  
@@ -85,6 +75,7 @@
 						%th Grade
 						%th Teacher
 						%th Title of Poem
+						%th Tags
 						%th Status
 						%th Poem/Images
 						%th Release
@@ -100,6 +91,7 @@
 							%td= poem.grade
 							%td= poem.student_teacher_name
 							%td= link_to poem.title, poem_path(poem)
+							%td= poem.list_of_tags
 							%td= poem.status
 							%td= link_to "Download", poem.attachment_url
 							%td= link_to "Download", poem.release_url
@@ -116,6 +108,7 @@
 						%th Grade
 						%th Teacher
 						%th Title of Poem
+						%th Tags
 						%th Status
 						%th Poem/Images
 						%th Release
@@ -132,6 +125,7 @@
 								%td= poem.grade
 								%td= poem.student_teacher_name
 								%td= link_to poem.title, poem_path(poem)
+								%td= poem.list_of_tags
 								%td= poem.status
 								%td= link_to "Download", poem.attachment_url
 								%td= link_to "Download", poem.release_url
@@ -149,6 +143,7 @@
 						%th Grade
 						%th Teacher
 						%th Title of Poem
+						%th Tags
 						%th Status
 						%th Poem/Images
 						%th Release
@@ -165,6 +160,7 @@
 								%td= poem.grade
 								%td= poem.student_teacher_name
 								%td= link_to poem.title, poem_path(poem)
+								%td= poem.list_of_tags
 								%td= poem.status
 								%td= link_to "Download", poem.attachment_url
 								%td= link_to "Download", poem.release_url
