@@ -8,6 +8,7 @@
         1,
         null,
         null
+<<<<<<< HEAD
       ],
       "/home/ubuntu/workspace/cs169-proj/CApoets/app/controllers/application_controller.rb": [
         1,
@@ -275,5 +276,10 @@
       ]
     },
     "timestamp": 1501832334
+=======
+      ]
+    },
+    "timestamp": 1501524066
+>>>>>>> updating testing
   }
 }

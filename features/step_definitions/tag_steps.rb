@@ -10,6 +10,7 @@ Given /I am a user on the new poem page who wants to tag a poem called "(.*)"/ d
     # fill_in "Email", :with => "Test@Test.com"
     # fill_in "Password", :with => "12345678"
     # click_button "Log in"
+<<<<<<< HEAD
     
     email = 'testing@man.net'
     password = 'secretpass'
@@ -19,8 +20,11 @@ Given /I am a user on the new poem page who wants to tag a poem called "(.*)"/ d
     fill_in "user_email", :with => email
     fill_in "user_password", :with => password
     click_button "Log in"
+=======
+>>>>>>> updating testing
     
     #visit new_tag_path
+    sign_in(:user, User.all.first)
     visit view_tags_path
     # @tag = FactoryGirl.create(:Tag, category: "temp", status: "pending", number_of_hits: "1")
 end
