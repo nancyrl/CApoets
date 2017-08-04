@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   
   
-
-
   resources :tags, except: [:index] do
     authenticated :user do
       post 'approve'
@@ -10,10 +8,16 @@ Rails.application.routes.draw do
     end
   end
   
+
   get '/home/', to: 'poems#home'
   get '/admin/', to: 'admin#index'
   
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations'
+  }
+    
   
   authenticated :user do 
     root 'poems#index', as: :authenticated_root

@@ -65,3 +65,7 @@ gem "factory_girl_rails", "~> 4.0"
 gem "selenium-webdriver"
 gem 'nokogiri'
 gem 'mechanize', '2.7.5'
+
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+gem 'cancancan'
