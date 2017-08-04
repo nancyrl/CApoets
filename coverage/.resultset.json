@@ -1,7 +1,9 @@
 {
   "Cucumber Features": {
     "coverage": {
+
       "/home/ubuntu/workspace/master/app/models/user.rb": [
+
         1,
         null,
         null,
@@ -51,14 +53,17 @@
         1,
         null,
         null,
+
         null,
         null
       ],
       "/home/ubuntu/workspace/master/app/controllers/application_controller.rb": [
         1,
+
         null,
         null,
         1,
+
         null,
         null,
         null,
@@ -82,11 +87,10 @@
       ],
       "/home/ubuntu/workspace/master/app/controllers/poems_controller.rb": [
         1,
+
         1,
-        0,
-        null,
-        null,
         1,
+
         10,
         null,
         null,
@@ -144,5 +148,7 @@
       ]
     },
     "timestamp": 1501475546
+
+  
   }
 }
