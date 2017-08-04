@@ -4,8 +4,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   # this code below prevents back button from letting users relog in. 
-
+  
+  before_action :authenticate_user!
   before_filter :set_cache_buster
+  
+  def after_sign_in_path_for(resource)
+    authenticated_root_path
+  end
+
 
   def set_cache_buster
     response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"

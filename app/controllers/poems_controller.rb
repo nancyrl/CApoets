@@ -1,4 +1,6 @@
 class PoemsController < ApplicationController
+    skip_before_action :authenticate_user!, :only => [:home]
+    
     def poem_params
         params.require(:poem).permit(:teacher_name, :county, :email, :student_name, :school, :grade, :student_teacher_name, :title, :list_of_tags, :attachment, :poem, :release)
     end
@@ -6,6 +8,16 @@ class PoemsController < ApplicationController
     def index
         @poems = Poem.all.order('created_at DESC')
     end
+    
+    
+    def new
+    
+    end
+    
+    def submitted
+    
+    end
+    
     
     def show
         id = params[:id]
@@ -31,13 +43,6 @@ class PoemsController < ApplicationController
                 @tag_objects.push(query)
             end
         end
-            
-        
-        
-    end
-    
-    def new
-    
     end
     
     def approve 
