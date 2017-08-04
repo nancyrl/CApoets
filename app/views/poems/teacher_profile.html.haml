@@ -4,9 +4,6 @@
     = stylesheet_link_tag 'show'
     = csrf_meta_tags
 .body
-  .logo 
-    = link_to image_tag("https://static.wixstatic.com/media/a0cfee_3825840911504adfac05ff6e22bf7b6c.jpg/v1/fill/w_198,h_134,al_c,q_80,usm_0.66_1.00_0.01/a0cfee_3825840911504adfac05ff6e22bf7b6c.webp", 
-    ),'/'
   .container
     .header
       %h2 
@@ -20,5 +17,27 @@
           = @poem.teacher_name
         %ol
           Title:
-          = @page.at('')
-          
+          = @page.at(".cbFormTableEvenRow has(td[text()='Title'])").parent.at('span').text
+        %ol
+          Email:
+          = @page.at(".cbFormTableRow has(td[text()='Email'])").parent.at('span').text
+        %ol
+          City:
+          = @page.at(".cbFormTableEvenRow has(td[text()='City'])").parent.at('span').text
+        %ol
+          County:
+          = @page.at(".cbFormTableRow has(td[text()='County'])").parent.at('span').text
+        %ol
+          State:
+          = @page.at(".cbFormTableEvenRow has(td[text()='State'])").parent.at('span').text
+        %ol
+          Zip:
+          = @page.at(".cbFormTableRow has(td[text()='Zip'])").parent.at('span').text
+        %ol
+          Bio:
+          = @page.at(".cbFormTableEvenRow has(td[text()='Bio'])").parent.at('span').text
+        %ol
+          Sample Poem:
+          = @page.at(".cbFormTableEvenRow has(td[text()='Sample poem'])").parent.at('span').text
+        %ol
+          = button_to "Go Back", '#', :onclick => 'history.back(); return false;'
