@@ -11,7 +11,14 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     authenticated_root_path
   end
-
+  
+  def page_not_found
+    # respond_to do |format|
+    #   format.html { render template: 'errors/not_found_error', layout: 'layouts/application', status: 404 }
+    #   format.all  { render nothing: true, status: 404 }
+    # end
+    get "/admin/404"
+  end
 
   def set_cache_buster
     response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"

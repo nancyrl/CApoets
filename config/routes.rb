@@ -44,6 +44,10 @@ Rails.application.routes.draw do
    get '/poems/', to: 'poems#home'
   end
 
+  if Rails.env.production?
+     get '404', :to => 'application#page_not_found'
+  end
+
   root to: 'poems#home'
   
   

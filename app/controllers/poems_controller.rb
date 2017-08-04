@@ -1,4 +1,5 @@
 class PoemsController < ApplicationController
+    #load_and_authorize_resource  User!, :except => [:home] #not too sure about this auth
     skip_before_action :authenticate_user!, :only => [:home]
     
     def poem_params
