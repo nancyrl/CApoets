@@ -13,8 +13,11 @@
         %ol
           = image_tag (@page.at('.cbFormData img').attributes["src"]), width: "300px"
         %ol
-          Name:
-          = @poem.teacher_name
+          Last Name:
+          = @page.at(".cbFormTableEvenRow has(td[text()='Name Last'])").parent.at('span').text
+        %ol
+          First Name:
+          = @page.at(".cbFormTableRow has(td[text()='Name First'])").parent.at('span').text
         %ol
           Title:
           = @page.at(".cbFormTableEvenRow has(td[text()='Title'])").parent.at('span').text
