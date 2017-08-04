@@ -13,9 +13,12 @@ class PoemsController < ApplicationController
         @url_test = request.base_url
         @url_test = "http://" + @url_test[8, @url_test.length]
         
+        #create tag_objects from tag strings so we can access and take advantage of tag properties
         @tag_objects = []
         @tags = @poem[:list_of_tags].split(/[\s,]+/)
         @tags.each do |tag|
+            # query is used to check if the tag that the poet-teacher is trying to submit already exists in the db.
+            # if it already exists, then do not create new tag object. use the query.
             query = Tag.where(category: tag).first
             if query.blank?
                 new_tag = Tag.new(:category => tag, :status => "Pending")

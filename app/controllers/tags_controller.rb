@@ -58,15 +58,38 @@ class TagsController < ApplicationController
     def create
         tags = tag_params
         tag_array = tags[:tag_list].split(/[\s,]+/)
+        duplicates = []
+        checked_tags = []
         
+        
+        #sanitation check (e.g. no duplicates)
         tag_array.each do |tag|
+            #tag is a string, use it to check if the tag already exists in db.
+            #if it already exists in database, give pop up box alerting user that duplicate tag will not be created.
+            if Tag.find_by(category: tag).present?
+                duplicates.push(tag)
+                checked_tags = tag_array - [tag]
+            end
+        end
+        
+        if duplicates.length > 0
+            flash[:warning] = "\"#{duplicates.to_sentence}\"" + " already exist(s) in the database. Non-duplicates successfully added."
+            # render :template => "index"
+        end
+        
+        #for all valid tags in checked_tags array, add them into the database.
+        checked_tags.each do |tag|
             new_tag = Tag.new(:category => tag, :status => "Pending")
             if not new_tag.save
                 flash[:warning] = "Please fix formatting."
                 render view_tags_path
             end
         end
+        
         redirect_to view_tags_path
+        
+        
+        #ASSUMPTIONS: by checking for duplication at time of creation, the database will never have any duplicate tags.
     end
     
     # def home
