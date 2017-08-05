@@ -49,9 +49,80 @@
             .input-group
               = label :poem, :title, 'Poem Title'
               = text_field :poem, 'title', :class => "entry_box", :id=> "poem_title", :type => 'text', :placeholder => 'ex: The Road Not Taken', :err => 'Poem Title'
+          / Dropdown Trigger
+          %a.dropdown-button.btn{"data-activates" => "dropdown1"} Poem tags
+          / Dropdown Structure
+          %ul#dropdown1.dropdown-content
+            %li
+              %a{:href => "#!"} Spring
+            %li
+              %a{:href => "#!"} Summer
+            %li.divider
+            %li
+              %a{:href => "#!"} Fall
+            %li
+              %a{:href => "#!"} Winter
+            %li
+              %a{:href => "#!"} Rain
+            %li
+              %a{:href => "#!"} Halloween
+            %li
+              %a{:href => "#!"} Snow
+            %li
+              %a{:href => "#!"} Holidays
+            %li
+              %a{:href => "#!"} Love
+            %li
+              %a{:href => "#!"} Family
+            %li
+              %a{:href => "#!"} Elementary School
+            %li
+              %a{:href => "#!"} Jr High
+            %li
+              %a{:href => "#!"} High School                                          
+            %li
+              %a{:href => "#!"} Imagination
+            %li
+              %a{:href => "#!"} Image
+            %li
+              %a{:href => "#!"} Shape
+            %li
+              %a{:href => "#!"} Sound
+            %li
+              %a{:href => "#!"} Chants and Rhythm
+            %li
+              %a{:href => "#!"} Senses
+            %li
+              %a{:href => "#!"} Personification
+            %li
+              %a{:href => "#!"} Hyperbole
+            %li
+              %a{:href => "#!"} Juxtaposition
+            %li
+              %a{:href => "#!"} Onomatopoeia
+            %li
+              %a{:href => "#!"} Tanka
+            %li
+              %a{:href => "#!"} Memory
+            %li
+              %a{:href => "#!"} Sapphic Modernism
+            %li
+              %a{:href => "#!"} Muse
+            %li
+              %a{:href => "#!"} Superlatives
+            %li
+              %a{:href => "#!"} Metaphor/Simile
+            %li
+              %a{:href => "#!"} Sestinas
+            %li
+              %a{:href => "#!"} Ode
+            %li
+              %a{:href => "#!"} Ekphrasis
+            %li
+              %a{:href => "#!"} Riddles
           .form-row
             .input-group
-              = label :poem, :title, 'Poem Tags'
+              = label :poem, :title, 'Create Poem Tags'
               = text_field :poem, 'list_of_tags', :class => "entry_box", :id=> "poem_tags", :type => 'text', :placeholder => 'ex: Love, Seasons, Ode', :err => 'Poem Tags'
           .form-row
             .input-group
