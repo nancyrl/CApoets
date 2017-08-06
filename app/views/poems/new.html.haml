@@ -120,8 +120,10 @@
               %a{:href => "#!"} Ekphrasis
             %li
               %a{:href => "#!"} Riddles
+
           .form-row
             .input-group
+              %p * Please choose one or more tags that categorize the poem, create new ones below if the existing ones do not match.
               = label :poem, :title, 'Create Poem Tags'
               = text_field :poem, 'list_of_tags', :class => "entry_box", :id=> "poem_tags", :type => 'text', :placeholder => 'ex: Love, Seasons, Ode', :err => 'Poem Tags'
           .form-row
@@ -131,7 +133,7 @@
           .form-row
             .input-group
               = label :poem, :attachment, 'Attach Poem/Images'
-              %p *Please combine multiple files into a single attachment prior to uploading.
+              %p * Please combine multiple files into a single attachment prior to uploading.
               = file_field :poem, :attachment, :id => "poem_button", :err => 'Attach Poem/Images'
           -#.form-row
           -#  .input-group
@@ -140,7 +142,7 @@
             .input-group
               = label :poem, :release, 'Release Form'
               %p
-                *Download a blank student release form on the Secure Login page – section 3 
+                * Download a blank student release form on the Secure Login page – section 3
                 %a{:href => "http://www.californiapoets.org/secure-login", :style => "display: inline;"} here     
               = file_field :poem, :release, :id => "release_button", :err => 'Release Form'
           %br
