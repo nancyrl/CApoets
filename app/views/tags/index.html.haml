@@ -2,6 +2,7 @@
 = javascript_include_tag 'admindash'
 
 // .rightbutton= link_to 'Log Out', destroy_user_session_path, :method=>'delete', :class=>"btn white logout"
+
 // .rightbutton= link_to 'Gallery', '/home?', :method=>'get', :class=>"btn white gallery"
 
 %h1 List of All Submitted Tags in Database
@@ -50,7 +51,7 @@
 					- @tags.each do |tag| 
 						- if tag.status == "Pending"
 							%tr
-								%td= tag.category
+								%td= tag.name
 								%td= button_to( "Approve", tag_approve_path(tag.id))
 								%td= button_to( "Reject", tag_reject_path(tag.id))
 		#tab-2.tab-content
@@ -62,7 +63,7 @@
 				%tbody
 					- @tags.each do |tag| 
 						%tr
-							%td= tag.category
+							%td= tag.name
 							%td= tag.status
 		#tab-3.tab-content
 			%table#poems
@@ -74,7 +75,7 @@
 					- @tags.each do |tag|
 						- if tag.status == "Approved"
 							%tr
-								%td= tag.category
+								%td= tag.name
 								%td= button_to( "Reject", tag_reject_path(tag.id))
 		#tab-4.tab-content
 			%table#poems
@@ -86,7 +87,7 @@
 					- @tags.each do |tag|
 						- if tag.status == "Rejected"
 							%tr
-								%td= tag.category
+								%td= tag.name
 								%td= button_to( "Revive", tag_approve_path(tag.id))
 					
 %script

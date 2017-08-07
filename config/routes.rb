@@ -1,31 +1,40 @@
 Rails.application.routes.draw do
   
   
-  
-  resources :poems, except: [:index] do
-    member do
-      post 'approve'
-      post 'reject'
-      get 'teacher_profile'
-    end
-  end 
-  
   resources :tags, except: [:index] do
     authenticated :user do
       post 'approve'
       post 'reject'
     end
-  end 
+  end
   
+
   get '/home/', to: 'poems#home'
-  get '/form/', to: 'poems#new'
-  get '/submitted/', to: 'poems#submitted'
   get '/admin/', to: 'admin#index'
   
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations'
+  }
+    
+  
   authenticated :user do 
     root 'poems#index', as: :authenticated_root
     get '/tags', to: 'tags#index', as: :view_tags
+    
+    get 'poems/submitted/', to: 'poems#submitted'
+
+    resources :poems, except: [:index] do
+      member do
+        post 'approve'
+        post 'reject'
+        get 'teacher_profile'
+      end
+    end
+
+
+    # get '/poems/submitted', to: 'poems#submitted'
     # get '/index/', to: 'tags#index', as: :view_tags
     # post 'approve_tag', to: 'tags#approve', as: :approve_tag
     # post 'reject_tag', to: 'tags#reject', as: :reject_tag
@@ -35,7 +44,20 @@ Rails.application.routes.draw do
    get '/poems/', to: 'poems#home'
   end
 
+  if Rails.env.production?
+     get '404', :to => 'application#page_not_found'
+  end
+
   root to: 'poems#home'
+  
+  
+  
+  
+  
+  
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
