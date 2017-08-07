@@ -16,23 +16,22 @@ class PoemsController < ApplicationController
         @url_test = "http://" + @url_test[8, @url_test.length]
         
         @tag_objects = []
-        @tags = @poem[:list_of_tags].split(/[\s,]+/)
-        @tags.each do |tag|
-            query = Tag.where(category: tag).first
-            if query.blank?
-                new_tag = Tag.new(:category => tag, :status => "Pending")
-                if not new_tag.save
-                    flash[:warning] = "Please fix formatting."
-                    render view_tags_path
+        if @poem[:list_of_tags]
+            @tags = @poem[:list_of_tags].split(/[\s,]+/)
+            @tags.each do |tag|
+                query = Tag.where(category: tag).first
+                if query.blank?
+                    new_tag = Tag.new(:category => tag, :status => "Pending")
+                    if not new_tag.save
+                        flash[:warning] = "Please fix formatting."
+                        render view_tags_path
+                    end
+                    @tag_objects.push(new_tag)
+                else
+                    @tag_objects.push(query)
                 end
-                @tag_objects.push(new_tag)
-            else
-                @tag_objects.push(query)
             end
         end
-            
-        
-        
     end
     
     def new

@@ -11,13 +11,9 @@
 	.switch-button
 		%div#options
 			%div 
-				=link_to "Poems", authenticated_root_path,  :class=>"btn white poem-tag"
+				=link_to "Poems", view_poems_path,  :class=>"btn white poem-tag"
 			%div 
 				=link_to "Tags", view_tags_path, :class=>"btn white poem-tag"
-			%div
-				=link_to 'Gallery', '/home?', :method=>'get', :class=>"btn white poem-tag"
-			%div 
-				=link_to 'Log Out', destroy_user_session_path, :method=>'delete', :class=>"btn white poem-tag"
 	.tabs-container
 		%ul.tabs
 			%li

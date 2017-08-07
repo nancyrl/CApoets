@@ -8,8 +8,7 @@ Rails.application.routes.draw do
     end
   end
   
-
-  get '/home/', to: 'poems#home'
+  get '/', to: 'poems#home'
   get '/admin/', to: 'admin#index'
   
   devise_for :users, controllers: {
@@ -19,10 +18,11 @@ Rails.application.routes.draw do
   }
     
   
-  authenticated :user do 
-    root 'poems#index', as: :authenticated_root
-    get '/tags', to: 'tags#index', as: :view_tags
+  authenticated :user do
+    get '/poems/', to:'poems#index', as: :view_poems
     
+    get '/tags', to: 'tags#index', as: :view_tags
+  
     get 'poems/submitted/', to: 'poems#submitted'
 
     resources :poems, except: [:index] do
@@ -49,14 +49,6 @@ Rails.application.routes.draw do
   end
 
   root to: 'poems#home'
-  
-  
-  
-  
-  
-  
-  
-  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

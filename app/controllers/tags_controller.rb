@@ -59,14 +59,14 @@ class TagsController < ApplicationController
         tags = tag_params
         tag_array = tags[:tag_list].split(/[\s,]+/)
         duplicates = []
-        checked_tags = []
-        
+        checked_tags = tag_array
         
         #sanitation check (e.g. no duplicates)
         tag_array.each do |tag|
             #tag is a string, use it to check if the tag already exists in db.
             #if it already exists in database, give pop up box alerting user that duplicate tag will not be created.
-            if Tag.find_by(category: tag).present?
+            puts tag
+            if Tag.find_by(name: tag).present?
                 duplicates.push(tag)
                 checked_tags = tag_array - [tag]
             end

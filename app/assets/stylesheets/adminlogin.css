@@ -1,3 +1,7 @@
+body{
+    padding-top:64px;
+}
+
 #new_user {
     text-align: center;
     margin: 0 auto;
@@ -13,8 +17,6 @@ a {
 
 h2 {
 	text-align: center;
-    margin: 0 auto;
-    margin: 2% 0 5% 0;
 }
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { 
@@ -33,6 +35,10 @@ nav {
   background-color: #c7e2f9 !important;
 }
 
+.btn{
+    
+}
+
 .message{
     text-align:center;
     font-family: 'Open Sans', sans-serif;
@@ -40,4 +46,20 @@ nav {
     font-weight: bold;
     color: #3d9be9;
     font-size: 20px;
+}
+
+#reg-option-container {
+   position: absolute;
+   width: 100%;
+   
+}
+
+.registration-options {
+    position: relative;
+    /*margin: 0 auto;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0 0 10px;
 }

@@ -10,9 +10,9 @@ class ApplicationController < ActionController::Base
   
   def after_sign_in_path_for(resource)
     if resource.is_a?(User)
-      authenticated_root_path
+      view_poems_path
     else
-      authenticated_root_path
+      view_poems_path
     end
   end
   
