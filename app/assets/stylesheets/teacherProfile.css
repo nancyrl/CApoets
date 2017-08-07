@@ -12,14 +12,21 @@ h2 {
 
 h3 {
     font-size: 20px;
+    padding-top: 3%;
+    font-weight: 500;
+
+}
+
+.body {
+    min-height: 130%;
 }
 .profile_pic {
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     width: 30%;
     float: left;
 }
 .personal_info {
-    position: auto;
+    /*position: auto;*/
     margin-top: 20px;
     width: 70%;
     float: right;
@@ -27,6 +34,8 @@ h3 {
 }
 
 .other_info {
-    position: auto;
+    /*position: auto;*/
     float: left; 
+    
+    line-height: 250%;
 }

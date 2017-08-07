@@ -42,12 +42,12 @@
         .other_info
           %ol
             %h3
-              Bio:
+              Bio
             %p
               = @page.at(".cbFormTableEvenRow has(td[text()='Bio'])").parent.at('span').text
           %ol
             %h3
-              Sample Poem:
+              Sample Poem
             = @page.at(".cbFormTableEvenRow has(td[text()='Sample poem'])").parent.at('span').text
           %ol
             = button_to "Go Back", '#', :onclick => 'history.back(); return false;'
