@@ -26,6 +26,7 @@ nav {
     background-color: #3d9be9 !important;
     position: fixed;
     top: 0;
+    z-index: 999;
 }
 
 .btn:hover {
