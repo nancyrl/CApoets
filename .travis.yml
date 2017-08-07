@@ -5,6 +5,7 @@ script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rspec
+  - bundle exec cucumber
 addons:
   code_climate:
     repo_token: f21bc9a324a316561ad18847382d54ad4367f4f2adae73147d4450c4b1b467b6
