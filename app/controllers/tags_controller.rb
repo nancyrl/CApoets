@@ -79,7 +79,7 @@ class TagsController < ApplicationController
         
         #for all valid tags in checked_tags array, add them into the database.
         checked_tags.each do |tag|
-            new_tag = Tag.new(:category => tag, :status => "Pending")
+            new_tag = Tag.new(:name => tag, :status => "Pending")
             if not new_tag.save
                 flash[:warning] = "Please fix formatting."
                 render view_tags_path

@@ -14,6 +14,7 @@
 // = require jquery
 // = require jquery_ujs
 // = require turbolinks
+// = require chosen
 // = require_tree .
 
 $(document).ready(function() {
