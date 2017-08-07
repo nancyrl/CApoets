@@ -1,6 +1,5 @@
 class PoemsController < ApplicationController
-    #load_and_authorize_resource  User!, :except => [:home] #not too sure about this auth
-    skip_before_action :authenticate_user!, :only => [:home]
+    skip_before_filter :authenticate_user!
     
     def poem_params
         params.require(:poem).permit(:teacher_name, :county, :email, :student_name, :school, :grade, :student_teacher_name, :title, :list_of_tags, :attachment, :poem, :release)
@@ -10,28 +9,15 @@ class PoemsController < ApplicationController
         @poems = Poem.all.order('created_at DESC')
     end
     
-    
-    def new
-    
-    end
-    
-    def submitted
-    
-    end
-    
-    
     def show
         id = params[:id]
         @poem = Poem.find(id)
         @url_test = request.base_url
         @url_test = "http://" + @url_test[8, @url_test.length]
         
-        #create tag_objects from tag strings so we can access and take advantage of tag properties
         @tag_objects = []
         @tags = @poem[:list_of_tags].split(/[\s,]+/)
         @tags.each do |tag|
-            # query is used to check if the tag that the poet-teacher is trying to submit already exists in the db.
-            # if it already exists, then do not create new tag object. use the query.
             query = Tag.where(category: tag).first
             if query.blank?
                 new_tag = Tag.new(:category => tag, :status => "Pending")
@@ -44,6 +30,13 @@ class PoemsController < ApplicationController
                 @tag_objects.push(query)
             end
         end
+            
+        
+        
+    end
+    
+    def new
+    
     end
     
     def approve 
@@ -64,7 +57,7 @@ class PoemsController < ApplicationController
         @poem = Poem.new(poem_params)
         if @poem.save
             Notifier.notify(@poem.teacher_name).deliver_later
-            redirect_to submitted_path
+            redirect_to poems_submitted_path
         else
             flash.now[:warning] = "Please fill in Missing Fields."
             render new_poem_path
