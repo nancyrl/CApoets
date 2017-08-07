@@ -21,7 +21,7 @@
 				=link_to "Approved Poems", "javascript:openTab(event, 'tab-3')", :class => "tab-link"
 			%li 
 				=link_to "Rejected Poems", "javascript:openTab(event, 'tab-4')", :class => "tab-link"
-			
+		
 		#tab-1.tab-content
 			%table#poems
 				%thead
@@ -58,8 +58,8 @@
 								%td= link_to "Download", poem.attachment_url
 								%td= link_to "Download", poem.release_url  
 								%td= poem.created_at.to_date.strftime("%B %d, %Y")
-								%td= button_to( "Approve", approve_poem_path(poem.id))
-								%td= button_to( "Reject", reject_poem_path(poem.id))
+								%td= button_to( "Approve", approve_poem_path(poem.id), :class => "btn small-btn")
+								%td= button_to( "Reject", reject_poem_path(poem.id), :class => "btn small-btn")
 								
 		#tab-2.tab-content
 			%table#poems
@@ -128,7 +128,7 @@
 								%td= link_to "Download", poem.attachment_url
 								%td= link_to "Download", poem.release_url
 								%td= poem.created_at.to_date.strftime("%B %d, %Y")
-								%td= button_to( "Reject", reject_poem_path(poem.id))
+								%td= button_to( "Reject", reject_poem_path(poem.id), :class => "btn small-btn")
 		#tab-4.tab-content
 			%table#poems
 				%thead
@@ -163,7 +163,7 @@
 								%td= link_to "Download", poem.attachment_url
 								%td= link_to "Download", poem.release_url
 								%td= poem.created_at.to_date.strftime("%B %d, %Y")
-								%td= button_to( "Approve", approve_poem_path(poem.id))
+								%td= button_to( "Approve", approve_poem_path(poem.id), :class => "btn small-btn")
 					
 %script
 	document.getElementById("current").click();
