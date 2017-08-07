@@ -19,6 +19,7 @@ h3 {
 
 .body {
     min-height: 130%;
+    margin-top: 10%;
 }
 .profile_pic {
     /*box-sizing: border-box;*/
