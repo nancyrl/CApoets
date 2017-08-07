@@ -8,9 +8,13 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_filter :set_cache_buster
   
-  # def after_sign_in_path_for(resource)
-  #   authenticated_root_path
-  # end
+  def after_sign_in_path_for(resource)
+    if resource.is_a?(User)
+      authenticated_root_path
+    else
+      authenticated_root_path
+    end
+  end
   
   def page_not_found
     # respond_to do |format|
