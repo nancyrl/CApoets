@@ -12,6 +12,7 @@ h1 {
 	padding: 20px;
 	text-align: center;
   color: #3d9be9;
+  margin-top: 10%;
 }
 
 .container{
@@ -107,8 +108,14 @@ th, td {
   margin-top: 10%;
 }
 
+.gallery {
+  color: #039be5;
+  margin-top: 10px;
+}
+
 .poem-tag {
   color: #039be5;
+  /*min-width: 120px;*/
 }
 
 .small-btn {
