@@ -1,7 +1,9 @@
 = stylesheet_link_tag "admindash"
 = javascript_include_tag 'admindash'
 
-.rightbutton= link_to 'Log Out', destroy_user_session_path, :method=>'delete', :class=>"btn white logout"
+// .rightbutton= link_to 'Log Out', destroy_user_session_path, :method=>'delete', :class=>"btn white logout"
+// .rightbutton= link_to 'Gallery', '/home?', :method=>'get', :class=>"btn white gallery"
+
 %h1 List of All Submitted Tags in Database
 
 .container
@@ -11,7 +13,10 @@
 				=link_to "Poems", authenticated_root_path,  :class=>"btn white poem-tag"
 			%div 
 				=link_to "Tags", view_tags_path, :class=>"btn white poem-tag"
-	
+			%div
+				=link_to 'Gallery', '/home?', :method=>'get', :class=>"btn white poem-tag"
+			%div 
+				=link_to 'Log Out', destroy_user_session_path, :method=>'delete', :class=>"btn white poem-tag"
 	.tabs-container
 		%ul.tabs
 			%li
