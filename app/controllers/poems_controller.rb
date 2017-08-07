@@ -16,12 +16,13 @@ class PoemsController < ApplicationController
         @url_test = "http://" + @url_test[8, @url_test.length]
         
         @tag_objects = []
-        if @poem[:tag_list]
-            @tags = @poem[:tag_list].split(/[\s,]+/)
+        if @poem.tag_list
+            @tags = @poem.tag_list
+
             @tags.each do |tag|
-                query = Tag.where(category: tag).first
+                query = Tag.where(name: tag).first
                 if query.blank?
-                    new_tag = Tag.new(:category => tag, :status => "Pending")
+                    new_tag = Tag.new(:name => tag, :status => "Pending")
                     if not new_tag.save
                         flash[:warning] = "Please fix formatting."
                         render view_tags_path
@@ -35,26 +36,34 @@ class PoemsController < ApplicationController
     end
     
     def new
-    
+        
     end
     
     def approve 
         poem = Poem.find(params[:id])
         poem.update_attributes(:status => "Approved")
         flash[:notice] = "You successfully approved this poem."
-        redirect_to authenticated_root_url
+        redirect_to view_poems_path
     end
     
     def reject
         poem = Poem.find(params[:id])
         poem.update_attributes(:status => "Rejected")
         flash[:notice] = "You successfully rejected this poem."
-        redirect_to authenticated_root_url
+        redirect_to view_poems_path
     end
     
     def create
         @poem = Poem.new(poem_params)
         if @poem.save
+            #create tags
+            for tag in @poem.tag_list
+                new_tag = Tag.new(:name => tag, :status => "Pending")
+                puts new_tag
+                if not new_tag.save
+                    flash[:warning] += tag + " was not formatted correctly"
+                end
+            end
             Notifier.notify(@poem.teacher_name).deliver_later
             redirect_to poems_submitted_path
         else
@@ -76,7 +85,8 @@ class PoemsController < ApplicationController
 
         if @page.nil?
             flash[:notice] = "Teacher does not exist"
-            redirect_to authenticated_root_url
+            redirect_to view_poems_path
         end
     end
+    
 end  
