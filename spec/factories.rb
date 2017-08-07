@@ -1,4 +1,18 @@
 FactoryGirl.define do
+  factory :tag do
+    name "MyString"
+    status "MyString"
+    popularity 1
+    taggings_count 1
+    created_at "2017-08-07 07:18:10"
+    updated_at "2017-08-07 07:18:10"
+  end
+  factory :create_tag do
+    category "MyString"
+    status "MyString"
+    number_of_hits 1
+    description "MyString"
+  end
   factory :poem do
     sequence(:title) {|n| "Title #{n}"}
     teacher_name 'a' 

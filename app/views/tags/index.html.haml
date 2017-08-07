@@ -1,0 +1,92 @@
+= stylesheet_link_tag "admindash"
+= javascript_include_tag 'admindash'
+
+// .rightbutton= link_to 'Log Out', destroy_user_session_path, :method=>'delete', :class=>"btn white logout"
+
+// .rightbutton= link_to 'Gallery', '/home?', :method=>'get', :class=>"btn white gallery"
+
+%h1 List of All Submitted Tags in Database
+
+.container
+	.switch-button
+		%div#options
+			%div 
+				=link_to "Poems", view_poems_path,  :class=>"btn white poem-tag"
+			%div 
+				=link_to "Tags", view_tags_path, :class=>"btn white poem-tag"
+	.tabs-container
+		%ul.tabs
+			%li
+				=link_to "Create Tags", "javascript:openTab(event, 'tab-0')", :id => "current", :class => "tab-link"
+			%li
+				=link_to "Pending Approval", "javascript:openTab(event, 'tab-1')", :class => "tab-link"
+			%li 
+				=link_to "All Tags", "javascript:openTab(event, 'tab-2')", :class => "tab-link"
+			%li 
+				=link_to "Approved Tags", "javascript:openTab(event, 'tab-3')", :class => "tab-link"
+			%li 
+				=link_to "Rejected Tags", "javascript:openTab(event, 'tab-4')", :class => "tab-link"
+			
+		#tab-0.tab-content
+			= form_tag tags_path, :class => "newtag_form", :multipart => true do
+				.form-row
+					.input-group
+						%h5 Create Tags
+						%p Enter a tag or a list of tags in the input box below. Capitalize the first letter, and separate each tag by a comma and a space.
+						// = label :poem, :poem, 'Poem'
+						= text_area :tag, 'new_tag_list', :class => "entry_box", :id => "tag_entry", :placeholder => 'e.g. Love, Seasons, Ode', :class=> "form-control"
+				%footer.footer
+					= submit_tag 'Submit Tag(s)', :id => "tag-button", :class=>"button"
+				%footer.footer
+					= Poem.first.tag_list.length
+		#tab-1.tab-content
+			%table#poems
+				%thead
+					%tr
+						%th Tag
+						%th Actions
+				%tbody
+					- @tags.each do |tag| 
+						- if tag.status == "Pending"
+							%tr
+								%td= tag.name
+								%td= button_to( "Approve", tag_approve_path(tag.id))
+								%td= button_to( "Reject", tag_reject_path(tag.id))
+		#tab-2.tab-content
+			%table#poems
+				%thead
+					%tr
+						%th Tag
+						%th Status
+				%tbody
+					- @tags.each do |tag| 
+						%tr
+							%td= tag.name
+							%td= tag.status
+		#tab-3.tab-content
+			%table#poems
+				%thead
+					%tr
+						%th Tag
+						%th Actions
+				%tbody
+					- @tags.each do |tag|
+						- if tag.status == "Approved"
+							%tr
+								%td= tag.name
+								%td= button_to( "Reject", tag_reject_path(tag.id))
+		#tab-4.tab-content
+			%table#poems
+				%thead
+					%tr
+						%th Tag
+						%th Actions
+				%tbody
+					- @tags.each do |tag|
+						- if tag.status == "Rejected"
+							%tr
+								%td= tag.name
+								%td= button_to( "Revive", tag_approve_path(tag.id))
+					
+%script
+	document.getElementById("current").click();

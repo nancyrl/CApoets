@@ -13,6 +13,7 @@ end
 group :test do
   gem "simplecov"
   gem "codeclimate-test-reporter", "~> 1.0.0"
+  gem 'email_spec'
 end
 
 group :production do
@@ -60,3 +61,16 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'devise'
 # gem 'tinymce-rails'
 gem "factory_girl_rails", "~> 4.0"
+
+gem "selenium-webdriver"
+gem 'nokogiri'
+gem 'mechanize', '2.7.5'
+
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+gem 'cancancan'
+
+gem 'acts-as-taggable-on'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-chosen'
+end

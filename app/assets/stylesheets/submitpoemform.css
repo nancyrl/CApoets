@@ -1,14 +1,15 @@
 body {
   background: #f2f2f2;
   font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 
-textarea.form-control{
+textarea .form-control{
   height: 150px;
   width: 540px;
   margin:0 auto;
@@ -16,18 +17,33 @@ textarea.form-control{
 } 
 
 img {
-  margin-top: 1rem;
   display: block;
-  max-height:10rem;
-  margin: auto;
+  max-height:6.5rem;
+  box-shadow: 2px 2px 10px #888888;
+  float: left;
+  top: 0;
 }
+
 
 .container {
   display: block;
-  max-width: 600px;
+  max-width: 700px;
   margin: 40px auto;
+  box-shadow: 2px 2px 10px #888888;
+  border-radius: 10px;
+  color: #313A3D;
 }
-.modal {
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: Georgia, serif
+}
+
+h4 {
+  margin-top: 35px;
+}
+.newpoem_form {
   background: #ffffff;
   -webkit-border-radius: 3px;
   -webkit-background-clip: padding-box;
@@ -36,8 +52,12 @@ img {
   border-radius: 3px;
   background-clip: padding-box;
   overflow: hidden;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 23%;
 }
-.modal .form .form-row {
+
+.newpoem_form .form .form-row {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -52,31 +72,35 @@ img {
   flex-direction: row;
   margin: 0 0 30px;
 }
-.modal .form .form-row:last-child {
+
+.newpoem_form .form .form-row:last-child {
   margin: 0;
 }
-.modal .form .form-row:last-child .input-group {
+
+.newpoem_form .form .form-row:last-child .input-group {
   width: 75%;
   margin: 0 15px 0 0;
 }
-.modal .form .form-row:last-child .input-group:last-child {
+
+.newpoem_form .form .form-row:last-child .input-group:last-child {
   width: 25%;
   margin: 0 0 0 15px;
 }
-.modal .form .input-group {
+
+.newpoem_form .form .input-group {
   width: 100%;
 }
-.modal .form label {
+.newpoem_form .form label {
   display: block;
   width: 100%;
   margin: 0 0 10px;
-  color: black;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.modal .form input {
+
+.newpoem_form .form input {
   outline: none;
   display: block;
   background: rgba(0, 0, 0, 0.1);
@@ -98,7 +122,7 @@ img {
   box-sizing: border-box;
 }
 
-.modal .form select{
+.newpoem_form .form select{
   outline: none;
   display: block;
   background: rgba(0, 0, 0, 0.1);
@@ -120,16 +144,15 @@ img {
   box-sizing: border-box;
 }
 
- .modal .header {
+.newpoem_form .header {
   background: #fcd307;
-  padding: 30px;
   text-align: center;
+  line-height: 60px;
+  padding: 20px 30px;
+  border-radius: 10px;
 } 
-.modal .header h1 {
-  margin: 0px;
-  color: black;
-  font-size: 14px;
-  font-weight: 700;
+
+.newpoem_form .header h1 {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -146,6 +169,10 @@ form label.header {
   padding: 30px;
 }
 
+.button:hover {
+  background-color: #FA865F !important;
+}
+
 .footer .button {
   outline: none;
   display: block;
@@ -159,6 +186,8 @@ form label.header {
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: .3s ease-out;
+  border-radius: 6px;
 }
 
 .info {
@@ -166,19 +195,22 @@ form label.header {
   margin: 50px auto;
   text-align: center;
 }
+
 .info h1 {
   margin: 0 0 15px;
   padding: 0;
   font: normal normal normal 14px/1.4em helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif;
-  font-size: 25px;
+  font-size: 56px;
   font-weight: 400;
   font-style: italic;
   color: #333;
 }
+
 .info span {
   color: #666;
   font-size: 12px;
 }
+
 .info span a {
   color: #000000;
   text-decoration: none;
@@ -202,4 +234,3 @@ lesshat-selector {
 @-moz-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 @-o-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
 @keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
-

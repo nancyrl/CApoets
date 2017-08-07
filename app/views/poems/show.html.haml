@@ -3,31 +3,59 @@
     %title 
     = stylesheet_link_tag 'show'
     = csrf_meta_tags
-
-.wrapper
-  %aside.aside.aside-1
-    %h2 
-      = @poem.title
-    %h3 
-      = @poem.student_name
-      , Grade
-      = @poem.grade
-    %li
-      Poet Teacher: 
-      = @poem.teacher_name
-    %li
-      Teacher: 
-      = @poem.student_teacher_name
-    %li
-      School: 
-      = @poem.school
-    %li
-      County: 
-      = @poem.county
-    %li
-      = link_to "Download", @poem.attachment_url
-   
-.wrapper 
-  %poemtext
-    = simple_format(@poem.poem)
-  
+.body
+  .logo 
+    = link_to image_tag("https://static.wixstatic.com/media/a0cfee_3825840911504adfac05ff6e22bf7b6c.jpg/v1/fill/w_198,h_134,al_c,q_80,usm_0.66_1.00_0.01/a0cfee_3825840911504adfac05ff6e22bf7b6c.webp", 
+    ),'/'
+  .container
+    .header
+      %h2 
+        = @poem.title
+      %h3 
+        = @poem.student_name
+        , Grade
+        = @poem.grade
+    %table#tag-table
+      %thead
+        %tr
+          %th Tags
+          %th Status
+          %th Actions
+      %tbody
+        - @tag_objects.each do |tag|
+          %tr
+            %td= tag.name
+            %td= tag.status
+            - if tag.status == "Approved"
+              %td= button_to( "Reject", tag_reject_path(tag.id))
+            - if tag.status == "Rejected"
+              %td= button_to( "Revive", tag_approve_path(tag.id))
+            - if tag.status == "Pending"
+              %td= button_to( "Approve", tag_approve_path(tag.id))
+              %td= button_to( "Reject", tag_reject_path(tag.id))
+    .container
+      = form_tag tags_path(:id => @poem.id), :class => "newtag_form", :multipart => true do
+        .form-row
+          .input-group
+            %h5 Add Tags
+            = text_area :tag, 'new_tag_list', :class => "entry_box", :id => "tag_entry", :placeholder => 'e.g. Love, Seasons, Ode', :class=> "form-control"
+          %footer.footer
+            = submit_tag 'Submit Tag(s)', :id => "tag-button", :class=>"button"
+    .content
+      .main
+        = simple_format(@poem.poem)
+      .info
+        %ol
+          Poet Teacher: 
+          = @poem.teacher_name
+        %ol
+          Teacher: 
+          = link_to @poem.teacher_name, teacher_profile_poem_path(@poem.id)
+        %ol
+          School: 
+          = @poem.school
+        %ol
+          County: 
+          = @poem.county
+        %ol
+          = link_to "Download", @poem.attachment_url
