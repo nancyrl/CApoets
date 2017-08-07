@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170807071755) do
+ActiveRecord::Schema.define(version: 20170807105641) do
 
   create_table "item_wrappers", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -34,16 +34,7 @@ ActiveRecord::Schema.define(version: 20170807071755) do
     t.string   "status",               default: "Pending"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "list_of_tags"
-  end
-
-  create_table "tags", force: :cascade do |t|
-    t.string   "name"
-    t.string   "status"
-    t.integer  "popularity"
-    t.integer  "taggings_count"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "tag_list"
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -65,6 +56,15 @@ ActiveRecord::Schema.define(version: 20170807071755) do
   add_index "taggings", ["taggable_type"], name: "index_taggings_on_taggable_type"
   add_index "taggings", ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
   add_index "taggings", ["tagger_id"], name: "index_taggings_on_tagger_id"
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.string   "status"
+    t.integer  "popularity"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "taggings_count", default: 0
+  end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
 

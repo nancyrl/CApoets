@@ -2,7 +2,7 @@ class PoemsController < ApplicationController
     skip_before_filter :authenticate_user!
     
     def poem_params
-        params.require(:poem).permit(:teacher_name, :county, :email, :student_name, :school, :grade, :student_teacher_name, :title, :list_of_tags, :attachment, :poem, :release)
+        params.require(:poem).permit(:teacher_name, :county, :email, :student_name, :school, :grade, :student_teacher_name, :title, :tag_list, :attachment, :poem, :release)
     end
     
     def index
@@ -16,8 +16,8 @@ class PoemsController < ApplicationController
         @url_test = "http://" + @url_test[8, @url_test.length]
         
         @tag_objects = []
-        if @poem[:list_of_tags]
-            @tags = @poem[:list_of_tags].split(/[\s,]+/)
+        if @poem[:tag_list]
+            @tags = @poem[:tag_list].split(/[\s,]+/)
             @tags.each do |tag|
                 query = Tag.where(category: tag).first
                 if query.blank?
